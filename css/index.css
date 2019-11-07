@@ -1,18 +1,33 @@
 body {
   margin: 0;
   background-color: #141434;
+  background-image: linear-gradient(#141434, #794E5E);
+  overflow: hidden;
 }
 
 .outer-wrapper {
-  overflow: auto;
-  height: 100vh;
+  overflow-y: hidden;
   width: 100vw;
   scroll-snap-type: x mandatory;
 }
 
+#background {
+  display: inline-block;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  z-index: -4;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 420vw;
+  height: 100vh;
+}
+
 .content {
   width: 80vw;
-  display: flex;
   scroll-snap-align: center;
   opacity: 0.6;
 }
@@ -36,40 +51,32 @@ img {
   z-index: -2;
 }
 
-#background {
-  height: 100vh;
-  display: inline-block;
-  position: absolute;
-  display: flex;
-  z-index: -4;
-}
-
 #home {
-  width: 80vw;
+  scroll-snap-align: start;
 }
 
 #about {
   background-color: pink;
-  height: 100vw;
 }
 
 #projects {
   background-color: purple;
-  height: 100vw;
 }
 
 #art {
   background-color: orange;
-  height: 100vw;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  width: 420vw;
 }
 
 ::-webkit-scrollbar {
+    height: 0;
     width: 0px;
-    background: transparent; /* make scrollbar transparent */
+    background: transparent;
+}
+
+#ground {
+  position: fixed;
+  background-color: #130D14;
+  bottom: 0;
+  height: 10vh;
+  width: 100vw;
 }
