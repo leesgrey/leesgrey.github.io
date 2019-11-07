@@ -3,20 +3,33 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="./css/index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
   <div class="outer-wrapper">
+    <div id="background">
+      <img class="turtle midground" src="./assets/turtle2.jpg"/>
+      <img class="turtle background" src="./assets/turtle3.jpeg"/>
+      <img class="turtle foreground" src="./assets/turtle1.jpg"/>
+    </div>
     <div class="wrapper">
-      <div class="content">
-        <p id="start">scroll up</p>
-        <img class="frog" src="./assets/frog1.jpg"/>
-        <p id="nice">nice</p>
-        <img class="frog" src="./assets/frog2.jpg"/>
-        <p id="yum">yummy</p>
-        <img class="frog" src="./assets/frog3.jpg"/>
-        <p id="idk">idk how to fix this lol</p>
+      <div id="home" class="content">
+        <h1>Home</h1>
+      </div>
+      <div id="about" class="content">
+        <h1>About</h1>
+      </div>
+      <div id="projects" class="content">
+        <h1>Projects</h1>
+      </div>
+      <div id="art" class="content">
+        <h1>Art</h1>
+      </div>
+      <div id="contact" class="content">
+        <h1>Contact</h1>
       </div>
     </div>
   </div>
+  <script src="./js/parallax.js"></script>
 </body>
 </html>
