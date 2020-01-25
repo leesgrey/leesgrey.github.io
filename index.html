@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <title>Hehehe</title>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="./css/index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu:700" rel="stylesheet">
 </head>
 <body>
-  <script>document.body.className += ' fade-out';</script>
   <!-- outer-wrapper, flipped left to achieve horizontal scroll - right side on top -->
   <div class="outer-wrapper">
     <!-- wrapper holds content -->
     <div class="wrapper">
       <div>
         <!-- mountains -->
-        <img class="mtn foreground" src="./assets/front_mountains.svg"/>
-        <img class="mtn midground" src="./assets/mid_mountains.svg"/>
-        <img class="mtn background" src="./assets/back_mountains.svg"/>
+        <img class="mtn foreground fadedIn" src="./assets/front_mountains.svg"/>
+        <img class="mtn midground fadedIn" src="./assets/mid_mountains.svg"/>
+        <img class="mtn background fadedIn" src="./assets/back_mountains.svg"/>
 
-        <img class="arrows" id="leftarrow" src="./assets/leftarrow.png">
-        <img class="arrows" id="rightarrow" src="./assets/rightarrow.png">
+        <img class="arrows fadedIn" id="leftarrow" src="./assets/leftarrow.png">
+        <img class="arrows fadedIn" id="rightarrow" src="./assets/rightarrow.png">
       </div>
 
-      <div id="moon"></div>
+      <div id="moon" class="fadedIn"></div>
 
       <div id="start" class="landing content">
-        <h1 id="name">Grey Lee</h1>
-        <ul id="menu">
+        <h1 id="name" class="fadedIn">Grey Lee</h1>
+        <ul id="menu" class="fadedIn">
           <li>
             <a class="menuLink" href="#about">About</a>
           </li>
@@ -43,28 +43,28 @@
       </div>
 
       <div id="about" href="#about" class="content">
-        <h1>About</h1>
+        <h1 class="label">About</h1>
         <div class="black">
           <p>Lorem ipsum whatever</p>
         </div>
       </div>
 
       <div id="projects" href="#projects" class="content">
-        <h1>Projects</h1>
+        <h1 class="label">Projects</h1>
         <div class="black">
           <p>Blah blah</p>
         </div>
       </div>
 
       <div id="art" href="#art" class="content">
-        <h1>Art</h1>
+        <h1 class="label">Art</h1>
         <div class="black">
           <p>Blah blah</p>
         </div>
       </div>
 
       <div id="contact" href="#contact" class="content">
-        <h1>Contact</h1>
+        <h1 class="label">Contact</h1>
         <div class="black">
           <ul>
             <li><a href="">GitHub</a></li>

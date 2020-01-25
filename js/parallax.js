@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', init, false);
 function init(){
   console.log("initializing")
-  document.body.classList.remove('fade-out')
 
   const left_arrow = document.querySelector('#leftarrow');
   const foreground = document.querySelector('.foreground');
@@ -21,7 +20,6 @@ function init(){
     })
   }
 
-
   let refPoint = document.querySelector('h1').getBoundingClientRect();
 
   document.querySelector('#name').addEventListener('click', function(e) {
@@ -37,4 +35,13 @@ function init(){
     midground.style.left =+ (scrolled * 0.1) + 'px';
     background.style.left =+ (scrolled * 0.05) + 'px';
   })
+
+  /*
+  const labels = document.getElementsByClassName('label')
+  const name = document.querySelector('#name')
+  document.body.addEventListener('mousemove', function(e) {
+    name.style.left =- (e.x / 40) + 'px'
+    name.style.top =- (e.y / 40) + 'px'
+  })
+  */
 }
