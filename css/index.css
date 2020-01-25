@@ -1,22 +1,77 @@
 body {
   margin: 0;
-  background-color: #141434;
-  background-image: linear-gradient(#141434, #794E5E);
-  overflow: hidden;
+  background-color: #090A19;
+  overflow: hidden; /* prevents "bouncing" out of window */
+  height: 100%;
 }
 
 .outer-wrapper {
-  overflow-y: hidden;
+  overflow-y: scroll; /* allows "horizontal" scroll */
   width: 100vw;
   scroll-snap-type: x mandatory;
 }
 
+#menu {
+  font-family: 'Open-Sans', sans-serif;
+  list-style-type: none;
+}
+
+#menu a {
+  text-decoration: none;
+}
+
+.mtn {
+  position: absolute; /* relative to background div*/
+  left: 0;
+  top: 42vh;
+  min-width: 120vw;
+}
+
+p {
+  font-family: 'Open-Sans', sans-serif;
+}
+
+.black {
+  position: relative;
+  padding: 40px;
+  left: 33vw;
+  color: white;
+  width: 30vw;
+  height: 90vh;
+  background-color: rgba(1,1,1, 0.6);
+  z-index: -1;
+}
+
+#start {
+  margin: 100px;
+}
+
+.landing {
+  color: #C3DFEB;
+}
+
 #background {
-  display: inline-block;
   position: absolute;
   display: flex;
   flex-direction: row;
-  z-index: -4;
+  right: 0;
+}
+
+#leftarrow {
+  position: absolute;
+  left: 30px;
+}
+
+#rightarrow {
+  position: absolute;
+  right: 30px;
+}
+
+.arrows {
+  height: 15%;
+  position: fixed;
+  top: 40%;
+  vertical-align: middle;
 }
 
 .wrapper {
@@ -26,16 +81,39 @@ body {
   height: 100vh;
 }
 
+#name {
+  top: 0;
+  font-size: 8vw;
+}
+
 .content {
-  width: 80vw;
+  width: 110vw;
   scroll-snap-align: center;
-  opacity: 0.6;
 }
 
 h1 {
-  opacity: 1;
-  color: white;
-  font-family: Helvetica, Arial, sans-serif;
+  font-size: 5vw;
+  color: #DFF2FA;
+  font-family: 'Ubuntu', Sans-Serif;
+  text-transform: uppercase;
+  position: relative;
+  top: 33vh;
+  bottom: 0px;
+  margin: 0;
+  z-index: -2;
+}
+
+.foreground {
+  z-index: 0;
+  pointer-events: none;
+}
+
+.midground {
+  z-index: -3;
+}
+
+.background {
+  z-index: -4;
 }
 
 img {
@@ -43,40 +121,12 @@ img {
   position: relative;
 }
 
-.foreground {
-  z-index: -1;
-}
-
-.midground {
-  z-index: -2;
-}
-
 #home {
   scroll-snap-align: start;
-}
-
-#about {
-  background-color: pink;
-}
-
-#projects {
-  background-color: purple;
-}
-
-#art {
-  background-color: orange;
 }
 
 ::-webkit-scrollbar {
     height: 0;
     width: 0px;
     background: transparent;
-}
-
-#ground {
-  position: fixed;
-  background-color: #130D14;
-  bottom: 0;
-  height: 10vh;
-  width: 100vw;
 }
