@@ -11,9 +11,30 @@ body {
   scroll-snap-type: x mandatory;
 }
 
+#moon {
+  width: 110px;
+  height: 110px;
+  border-radius: 95px;
+  background-color: white;
+  mix-blend-mode: exclusion;
+  position: fixed;
+  flex-shrink: 0;
+  top: 50px;
+  left: 40px;
+  display: inline-block;
+}
+
 #menu {
   font-family: 'Open-Sans', sans-serif;
   list-style-type: none;
+}
+
+a {
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
 }
 
 #menu a {
@@ -37,7 +58,7 @@ p {
   left: 33vw;
   color: white;
   width: 30vw;
-  height: 90vh;
+  height: 50vh;
   background-color: rgba(1,1,1, 0.6);
   z-index: -1;
 }
@@ -84,6 +105,7 @@ p {
 #name {
   top: 0;
   font-size: 8vw;
+  display: inline-block;
 }
 
 .content {
