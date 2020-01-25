@@ -3,6 +3,13 @@ body {
   background-color: #090A19;
   overflow: hidden; /* prevents "bouncing" out of window */
   height: 100%;
+  opacity: 1;
+  transition: 1.5s opacity;
+}
+
+body.fade-out{
+  opacity: 0;
+  transition: none;
 }
 
 .outer-wrapper {
@@ -26,15 +33,28 @@ body {
 
 #menu {
   font-family: 'Open-Sans', sans-serif;
+  font-size: 1.3em;
+  margin: 0;
+  display: inline-block;
   list-style-type: none;
+}
+
+#menu li{
+  display: inline-block;
+  margin-left: 1em;
 }
 
 a {
   color: white;
+  transition: 0.5s color;
 }
 
 a:visited {
   text-decoration: none;
+}
+
+a:hover {
+  color: #F2D9A1;
 }
 
 #menu a {
@@ -104,6 +124,7 @@ p {
 
 #name {
   top: 0;
+  color: #F2D9A1;
   font-size: 8vw;
   display: inline-block;
 }

@@ -1,8 +1,8 @@
 'use strict';
-
 document.addEventListener('DOMContentLoaded', init, false);
 function init(){
   console.log("initializing")
+  document.body.classList.remove('fade-out')
 
   const left_arrow = document.querySelector('#leftarrow');
   const foreground = document.querySelector('.foreground');
