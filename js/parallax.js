@@ -84,7 +84,7 @@ function init(){
         fades[i].style.opacity = 1;
       }
       else {
-        fades[i].style.opacity = 0;
+        fades[i].style.opacity = 0.3;
       }
     }
   }
