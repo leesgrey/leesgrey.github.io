@@ -110,14 +110,9 @@ p {
   color: white;
   width: 30vw;
   height: 50vh;
-  /* background-color: rgba(1,1,1, 0.6); */
   z-index: -1;
   border: 2px solid white;
   border-radius: 2vw;
-}
-
-.black:hover {
-  background-color: rgba(5, 100, 5, 0.3);
 }
 
 #profile {
