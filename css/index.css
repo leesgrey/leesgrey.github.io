@@ -38,15 +38,10 @@ body {
   mix-blend-mode: multiply;
   display: inline-block;
   z-index: 1;
-  transition: .5s background-color, .5s width, .5s height, .5s top, .5s left;
 }
 
 #moon:hover {
-  background-color: #F2D9A1;
-  width: 104px;
-  height: 104px;
-  top: 53px;
-  left: 43px;
+  color: red;
 }
 
 #moonshadow {
