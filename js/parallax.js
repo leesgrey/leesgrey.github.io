@@ -60,7 +60,7 @@ function init(){
 
   /* parallel scroll */
   let refPoint = document.querySelector('h1').getBoundingClientRect();
-  
+
   document.querySelector('.outer-wrapper').addEventListener('scroll', function(e) {
     refPoint = document.querySelector('.wrapper').getBoundingClientRect();
     var scrolled = refPoint.x;
