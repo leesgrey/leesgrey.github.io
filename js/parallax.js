@@ -4,6 +4,8 @@ function init(){
   console.log("initializing")
 
   const wrapper = document.querySelector('.outer-wrapper');
+  const moonshadow = document.querySelector('#moonshadow');
+  const moon = document.querySelector('#moon');
 
   const left_arrow = document.querySelector('#leftarrow');
   const right_arrow = document.querySelector('#rightarrow');
@@ -39,6 +41,9 @@ function init(){
     });
   })
 
+  moonshadow.style.left = (moon.offsetLeft + moon.offsetWidth) + 'px';
+  console.log(moon.offsetLeft)
+
   /* parallel scroll */
   let refPoint = document.querySelector('h1').getBoundingClientRect();
   document.querySelector('.outer-wrapper').addEventListener('scroll', function(e) {
@@ -48,5 +53,6 @@ function init(){
     foreground.style.left = (scrolled * 0.15) + 'px';
     midground.style.left = (scrolled * 0.1) + 'px';
     background.style.left = (scrolled * 0.05) + 'px';
+    moonshadow.style.left = (moon.offsetLeft + moon.offsetWidth) + (scrolled * 0.05) + 'px'
   })
 }

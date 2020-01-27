@@ -39,6 +39,23 @@ body {
   display: inline-block;
 }
 
+#moon:hover {
+  color: red;
+}
+
+#moonshadow {
+  width: 100px;
+  height: 100px;
+  border-radius: 95px;
+  background-color: #090A19;
+  position: fixed;
+  flex-shrink: 0;
+  top: 55px;
+  z-index: 0;
+  left: 45px;
+  display: inline-block;
+}
+
 #menu {
   font-family: 'Ubuntu', sans-serif;
   text-transform: uppercase;
@@ -154,10 +171,8 @@ p {
   font-size: 8vw;
   display: inline-block;
   animation-delay: 0.5s;
-}
-
-#name:hover {
-  font-size: 10vw;
+  z-index: 2;
+  mix-blend-mode: exclusion;
 }
 
 .content {
