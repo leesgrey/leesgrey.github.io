@@ -31,12 +31,13 @@ body {
   height: 110px;
   border-radius: 95px;
   background-color: white;
-  mix-blend-mode: exclusion;
   position: fixed;
   flex-shrink: 0;
   top: 50px;
   left: 40px;
+  mix-blend-mode: multiply;
   display: inline-block;
+  z-index: 1;
 }
 
 #moon:hover {
@@ -94,6 +95,7 @@ a:hover {
   left: 0;
   top: 42vh;
   min-width: 120vw;
+  bottom: 0;
 }
 
 p {
@@ -173,11 +175,17 @@ p {
   animation-delay: 0.5s;
   z-index: 2;
   mix-blend-mode: exclusion;
+  transition: 2s color;
 }
 
 .content {
   width: 110vw;
   scroll-snap-align: center;
+  transition: 0.5s opacity;
+}
+
+.fades {
+  opacity: 0;
 }
 
 h1 {
