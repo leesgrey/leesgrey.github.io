@@ -3,6 +3,7 @@ body {
   background-color: #090A19;
   overflow: hidden; /* prevents "bouncing" out of window */
   height: 100%;
+  font-family: 'Open-Sans', sans-serif;
 }
 
 @keyframes fadeIn {
@@ -17,11 +18,6 @@ body {
 .fadedIn {
   opacity: 0;
   animation: fadeIn 1s forwards;
-}
-
-body.fade-out{
-  opacity: 0;
-  transition: none;
 }
 
 .outer-wrapper {
@@ -44,7 +40,8 @@ body.fade-out{
 }
 
 #menu {
-  font-family: 'Open-Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+  text-transform: uppercase;
   font-size: 1.3em;
   margin: 0;
   display: inline-block;
@@ -57,10 +54,9 @@ body.fade-out{
   margin-left: 1em;
 }
 
-
-
 a {
   color: white;
+  text-decoration: none;
   transition: 0.5s color;
 }
 
@@ -85,17 +81,29 @@ a:hover {
 
 p {
   font-family: 'Open-Sans', sans-serif;
+  margin: 0;
 }
 
 .black {
   position: relative;
-  padding: 40px;
+  padding: 3vw;
   left: 33vw;
   color: white;
   width: 30vw;
   height: 50vh;
-  background-color: rgba(1,1,1, 0.6);
+  /* background-color: rgba(1,1,1, 0.6); */
   z-index: -1;
+  border: 2px solid white;
+  border-radius: 2vw;
+}
+
+.black:hover {
+  background-color: rgba(5, 100, 5, 0.3);
+}
+
+#profile {
+  width: 100%;
+  height: auto;
 }
 
 #start {
@@ -124,11 +132,13 @@ p {
 }
 
 .arrows {
-  height: 15%;
+  height: 12%;
   position: fixed;
-  top: 40%;
+  top: 45%;
   vertical-align: middle;
   animation-delay: 1s;
+  mix-blend-mode: exclusion;
+  z-index: 1;
 }
 
 .wrapper {

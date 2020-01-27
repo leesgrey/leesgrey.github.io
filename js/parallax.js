@@ -3,14 +3,17 @@ document.addEventListener('DOMContentLoaded', init, false);
 function init(){
   console.log("initializing")
 
+  const wrapper = document.querySelector('.outer-wrapper');
+
   const left_arrow = document.querySelector('#leftarrow');
+  const right_arrow = document.querySelector('#rightarrow');
+
   const foreground = document.querySelector('.foreground');
   const background = document.querySelector('.background');
   const midground = document.querySelector('.midground');
 
+  /* scroll to menu page */
   const menuLinks = document.getElementsByClassName("menuLink");
-  console.log(menuLinks)
-
   for (let i = 0; i < menuLinks.length; i++) {
     menuLinks[i].addEventListener('click', function(e) {
       e.preventDefault();
@@ -20,28 +23,30 @@ function init(){
     })
   }
 
-  let refPoint = document.querySelector('h1').getBoundingClientRect();
-
-  document.querySelector('#name').addEventListener('click', function(e) {
-    console.log(foreground.style.left)
+  /* arrow click */
+  left_arrow.addEventListener('click', function(e) {
+    console.log('left');
+    wrapper.scrollBy({
+      left: -window.innerWidth / 2,
+      behavior: 'smooth'
+    })
+  })
+  right_arrow.addEventListener('click', function(e) {
+    console.log('right')
+    wrapper.scrollBy({
+      left: window.innerWidth / 2,
+      behavior: 'smooth'
+    });
   })
 
+  /* parallel scroll */
+  let refPoint = document.querySelector('h1').getBoundingClientRect();
   document.querySelector('.outer-wrapper').addEventListener('scroll', function(e) {
-    console.log("scrolling")
     refPoint = document.querySelector('.wrapper').getBoundingClientRect();
     var scrolled = refPoint.x;
 
-    foreground.style.left =+ (scrolled * 0.15) + 'px';
-    midground.style.left =+ (scrolled * 0.1) + 'px';
-    background.style.left =+ (scrolled * 0.05) + 'px';
+    foreground.style.left = (scrolled * 0.15) + 'px';
+    midground.style.left = (scrolled * 0.1) + 'px';
+    background.style.left = (scrolled * 0.05) + 'px';
   })
-
-  /*
-  const labels = document.getElementsByClassName('label')
-  const name = document.querySelector('#name')
-  document.body.addEventListener('mousemove', function(e) {
-    name.style.left =- (e.x / 40) + 'px'
-    name.style.top =- (e.y / 40) + 'px'
-  })
-  */
 }
