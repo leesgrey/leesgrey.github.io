@@ -6,6 +6,11 @@ body {
   font-family: 'Open-Sans', sans-serif;
 }
 
+p {
+  font-family: 'Open-Sans', sans-serif;
+  margin: 0;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -35,9 +40,9 @@ body {
   flex-shrink: 0;
   top: 50px;
   left: 40px;
-  mix-blend-mode: multiply;
+  mix-blend-mode: exclusion;
   display: inline-block;
-  z-index: 1;
+  z-index: 4;
 }
 
 #moon:hover {
@@ -52,9 +57,38 @@ body {
   position: fixed;
   flex-shrink: 0;
   top: 55px;
-  z-index: 0;
+  z-index: 1;
   left: 45px;
+  opacity: 0;
+  transition: .5s opacity;
   display: inline-block;
+}
+
+#moonshadow:hover {
+  opacity: 1;
+}
+
+#caption {
+  font-family: 'Ubuntu', sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  left: 20px;
+  animation-delay: 1.5s;
+}
+
+#icons {
+  position: fixed;
+  z-index: 5;
+  bottom : 15px;
+  right: 15px;
+  animation-delay: 1s;
+}
+
+#icons img {
+  width: 3vw;
+  min-width: 32px;
+  height: auto;
+  filter: brightness(100);
 }
 
 #menu {
@@ -72,6 +106,10 @@ body {
   margin-left: 1em;
 }
 
+#menu a {
+  text-decoration: none;
+}
+
 a {
   color: white;
   text-decoration: none;
@@ -86,10 +124,6 @@ a:hover {
   color: #F2D9A1;
 }
 
-#menu a {
-  text-decoration: none;
-}
-
 .mtn {
   position: absolute; /* relative to background div*/
   left: 0;
@@ -98,25 +132,32 @@ a:hover {
   bottom: 0;
 }
 
-p {
-  font-family: 'Open-Sans', sans-serif;
-  margin: 0;
-}
-
 .black {
   position: relative;
   padding: 3vw;
-  left: 33vw;
+  left: 25vw;
   color: white;
-  width: 30vw;
-  height: 50vh;
-  z-index: -1;
+  width: 45vw;
+  overflow: auto;
   border: 2px solid white;
   border-radius: 2vw;
+  z-index: 5;
+  background-color: rgba(1, 1, 1, 0.3);
+}
+
+#abtcap {
+  width: 40%;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+#abtcap p {
+  margin-bottom: 15px;
 }
 
 #profile {
-  width: 100%;
+  width: 50%;
+  display: inline-block;
   height: auto;
 }
 
@@ -136,12 +177,10 @@ p {
 }
 
 #leftarrow {
-  position: absolute;
   left: 30px;
 }
 
 #rightarrow {
-  position: absolute;
   right: 30px;
 }
 
@@ -152,7 +191,11 @@ p {
   vertical-align: middle;
   animation-delay: 1s;
   mix-blend-mode: exclusion;
-  z-index: 1;
+  z-index: 3;
+}
+
+.arrows img {
+  position: absolute;
 }
 
 .wrapper {
@@ -174,7 +217,7 @@ p {
 }
 
 .content {
-  width: 110vw;
+  width: 100vw;
   scroll-snap-align: center;
   transition: 0.5s opacity;
 }
@@ -196,7 +239,7 @@ h1 {
 }
 
 .foreground {
-  z-index: 0;
+  z-index: 1;
   pointer-events: none;
   animation-delay: 1s;
 }
