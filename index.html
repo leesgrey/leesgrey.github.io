@@ -9,47 +9,41 @@
   <link rel="shortcut icon" href="./assets/favicon.png"/>
 </head>
 <body>
-  <!-- outer-wrapper, flipped left to achieve horizontal scroll - right side on top -->
-  <div class="outer-wrapper">
-    <!-- wrapper holds content -->
-    <div class="wrapper">
-      <div id="icons" class="fadedIn'">
-        <a href="https://www.linkedin.com/in/greysieunlee/"><img src="./assets/linkedin.png"/></a>
-        <a href="https://github.com/leesgrey"><img src="./assets/github.png"/></a>
-        <a href="mailto:sieungrey.lee@mail.utoronto.ca"><img src="./assets/email.png"/></a>
-      </div>
-      <div id="bg">
-        <!-- mountains -->
-        <img class="mtn foreground fadedIn" src="./assets/front_mountains.svg"/>
-        <img class="mtn midground fadedIn" src="./assets/mid_mountains.svg"/>
-        <img class="mtn background fadedIn" src="./assets/back_mountains.svg"/>
+  <div class="wrapper">
 
-        <img class="arrows fadedIn" id="leftarrow" src="./assets/leftarrow.png">
-        <img class="arrows fadedIn" id="rightarrow" src="./assets/rightarrow.png">
-      </div>
+    <div id="icons" class="fadedIn'">
+      <a href="https://www.linkedin.com/in/greysieunlee/"><img src="./assets/linkedin.png"/></a>
+      <a href="https://github.com/leesgrey"><img src="./assets/github.png"/></a>
+      <a href="mailto:sieungrey.lee@mail.utoronto.ca"><img src="./assets/email.png"/></a>
+    </div>
 
+    <div id="bg">
+      <img class="mtn foreground fadedIn" src="./assets/front_mountains.svg"/>
+      <img class="mtn midground fadedIn" src="./assets/mid_mountains.svg"/>
+      <img class="mtn background fadedIn" src="./assets/back_mountains.svg"/>
       <div id="moon" class="fadedIn"></div>
-      <div id="moonshadow"></div>
+    </div>
 
-      <div id="start" class="landing content">
-        <h1 id="name" class="fadedIn">Grey Lee</h1>
-        <ul id="menu" class="fadedIn">
-          <li>
-            <a class="menuLink" href="#about">About</a>
-          </li>
-          <li>
-            <a class="menuLink" href="#projects">Projects</a>
-          </li>
-          <li>
-            <a class="menuLink" href="#art">Art</a>
-          </li>
-          <li>
-            <a class="menuLink" href="#contact">Contact</a>
-          </li>
-        </ul>
-        <p id="caption" class="fadedIn">(under construction!)</p>
-      </div>
+    <div id="start" class="landing">
+      <h1 id="name" class="fadedIn">Grey Lee</h1>
+      <ul id="menu" class="fadedIn">
+        <li>
+          <a class="menuLink" href="#about">About</a>
+        </li>
+        <li>
+          <a class="menuLink" href="#projects">Projects</a>
+        </li>
+        <li>
+          <a class="menuLink" href="#art">Art</a>
+        </li>
+        <li>
+          <a class="menuLink" href="#contact">Contact</a>
+        </li>
+      </ul>
+      <p id="caption" class="fadedIn">(under construction!)</p>
+    </div>
 
+    <div id="main">
       <div id="about" href="#about" class="content fades">
         <h1 class="label">About</h1>
         <div class="black">
@@ -85,8 +79,8 @@
           </ul>
         </div>
       </div>
-
     </div>
+
   </div>
   <script src="./js/parallax.js"></script>
 </body>
