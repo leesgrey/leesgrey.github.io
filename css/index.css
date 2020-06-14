@@ -1,13 +1,16 @@
 body {
   margin: 0;
   background-color: #090A19;
-  /* overflow: hidden; /* prevents "bouncing" out of window */
+  overflow: hidden; /* prevents "bouncing" out of window */
   height: 100%;
   font-family: 'Open-Sans', sans-serif;
 }
 
+a {
+  cursor: pointer;
+}
+
 p {
-  font-family: 'Open-Sans', sans-serif;
   margin: 0;
 }
 
@@ -25,10 +28,13 @@ p {
   animation: fadeIn 1s forwards;
 }
 
+.semifadedIn {
+  opacity: 0;
+  animation: fadeTo 1s 0.5 forwards;
+}
+
 .outer-wrapper {
-  /* overflow-y: scroll; /* allows "horizontal" scroll */
-  width: 100vw;
-  scroll-snap-type: x mandatory;
+  overflow-x: hidden;
 }
 
 #moon {
@@ -37,35 +43,11 @@ p {
   border-radius: 95px;
   background-color: white;
   position: fixed;
-  flex-shrink: 0;
   top: 50px;
   left: 40px;
   mix-blend-mode: exclusion;
   display: inline-block;
   z-index: 4;
-}
-
-#moon:hover {
-  color: red;
-}
-
-#moonshadow {
-  width: 100px;
-  height: 100px;
-  border-radius: 95px;
-  background-color: #090A19;
-  position: fixed;
-  flex-shrink: 0;
-  top: 55px;
-  z-index: 1;
-  left: 45px;
-  opacity: 0;
-  transition: .5s opacity;
-  display: inline-block;
-}
-
-#moonshadow:hover {
-  opacity: 1;
 }
 
 #caption {
@@ -145,6 +127,7 @@ a:hover {
   background-color: rgba(1, 1, 1, 0.3);
 }
 
+
 #abtcap {
   width: 40%;
   display: inline-block;
@@ -161,10 +144,6 @@ a:hover {
   height: auto;
 }
 
-#start {
-  margin: 100px;
-}
-
 .landing {
   color: #C3DFEB;
 }
@@ -178,10 +157,15 @@ a:hover {
 
 #leftarrow {
   left: 30px;
+  display: none;
 }
 
 #rightarrow {
   right: 30px;
+}
+
+.active {
+  cursor: pointer;
 }
 
 .arrows {
@@ -220,10 +204,7 @@ a:hover {
   width: 100vw;
   scroll-snap-align: center;
   transition: 0.5s opacity;
-}
-
-.fades {
-  opacity: 0;
+  padding: 100px;
 }
 
 h1 {
@@ -258,10 +239,6 @@ h1 {
 img {
   height: 60vh;
   position: relative;
-}
-
-#home {
-  scroll-snap-align: start;
 }
 
 ::-webkit-scrollbar {

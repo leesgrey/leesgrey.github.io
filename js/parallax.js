@@ -9,7 +9,7 @@ function init(){
   const left_arrow = document.querySelector('#leftarrow');
   const right_arrow = document.querySelector('#rightarrow');
 
-  const fades = document.getElementsByClassName('fades');
+  const content = document.getElementsByClassName('fades');
 
   const foreground = document.querySelector('.foreground');
   const background = document.querySelector('.background');
@@ -17,58 +17,61 @@ function init(){
 
   const name = document.querySelector("#about");
 
+  /* keep track of section */
+  let current = 0;
+
+  console.log(current);
   /* arrow click */
   left_arrow.addEventListener('click', function(e) {
-    wrapper.animate({
-      scrollTop: 100
-    }, 1);
-    console.log($("#about").offset().left)
+    current--;
+    ArrowUpdate();
+    MountainUpdate();
   })
 
   right_arrow.addEventListener('click', function(e) {
-    wrapper.scrollBy({
-      left: window.innerWidth / 2,
-      behavior: 'smooth'
-    });
+    if (right_arrow.classList.contains('fadedIn')) {
+      right_arrow.classList.remove('fadedIn');
+    }
+    current++;
+    ArrowUpdate(current);
+    MountainUpdate();
   })
 
-  moonshadow.addEventListener('click', function(e) {
-    wrapper.scrollTo({
-      left: 0,
-      behavior: 'smooth'
-    })
-  })
 
-  /* stop scroll setup timer */
-  var timer;
-/*
-  let refPoint = document.querySelector('h1').getBoundingClientRect();
+  function ArrowUpdate() {
+    if (current == 0) {
+      left_arrow.classList.remove("active");
+    }
+    else if (current == 4) {
+      right_arrow.classList.remove("active");
+    }
+    else {
+      left_arrow.classList.add("active");
+      right_arrow.classList.add("active");
+    }
 
-  document.querySelector('.outer-wrapper').addEventListener('scroll', function(e) {
-    refPoint = document.querySelector('.wrapper').getBoundingClientRect();
-    var scrolled = refPoint.x;
+    if (left_arrow.classList.contains("active")) {
+      left_arrow.style.display = 'inline';
+    }
+    else {
+      left_arrow.style.display = 'none';
+    }
 
-    clearTimeout(timer);
-    timer = setTimeout(function(){
-      heehee()
-    }, 80);
-
-    foreground.style.left = (scrolled * 0.15) + 'px';
-    midground.style.left = (scrolled * 0.1) + 'px';
-    background.style.left = (scrolled * 0.05) + 'px';
-  })
-
-  function heehee(){
-    console.log("heehee")
-    for (var i = 0; i < fades.length; i++) {
-      if (Math.abs(fades[i].getBoundingClientRect().x - (window.innerWidth / 3)) < (window.innerWidth / 4)) {
-        fades[i].style.opacity = 1;
-      }
-      else {
-        fades[i].style.opacity = 0.3;
-      }
+    if (right_arrow.classList.contains("active")) {
+      right_arrow.style.display = 'inline';
+    }
+    else {
+      right_arrow.style.display = 'none';
     }
   }
-*/
+
+  function MountainUpdate() {
+    wrapper.scrollBy({
+      left: $(".content").eq(current).offset().left,
+      behavior: 'smooth'
+    })
+    console.log($(".content").eq(0).offset().left)
+  }
 }
+
 
