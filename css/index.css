@@ -1,7 +1,7 @@
 body {
   margin: 0;
   background-color: #090A19;
-  overflow: hidden; /* prevents "bouncing" out of window */
+  /* overflow: hidden; /* prevents "bouncing" out of window */
   height: 100%;
   font-family: 'Open-Sans', sans-serif;
 }
@@ -26,7 +26,7 @@ p {
 }
 
 .outer-wrapper {
-  overflow-y: scroll; /* allows "horizontal" scroll */
+  /* overflow-y: scroll; /* allows "horizontal" scroll */
   width: 100vw;
   scroll-snap-type: x mandatory;
 }

@@ -1,6 +1,7 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', init, false);
 function init(){
+  /* element selection */
   const wrapper = document.querySelector('.outer-wrapper');
 
   const moon = document.querySelector('#moon');
@@ -18,11 +19,12 @@ function init(){
 
   /* arrow click */
   left_arrow.addEventListener('click', function(e) {
-    wrapper.scrollBy({
-      left: -window.innerWidth / 2,
-      behavior: 'smooth'
-    })
+    wrapper.animate({
+      scrollTop: 100
+    }, 1);
+    console.log($("#about").offset().left)
   })
+
   right_arrow.addEventListener('click', function(e) {
     wrapper.scrollBy({
       left: window.innerWidth / 2,
@@ -39,10 +41,9 @@ function init(){
 
   /* stop scroll setup timer */
   var timer;
-
-  /* parallel scroll */
+/*
   let refPoint = document.querySelector('h1').getBoundingClientRect();
-  
+
   document.querySelector('.outer-wrapper').addEventListener('scroll', function(e) {
     refPoint = document.querySelector('.wrapper').getBoundingClientRect();
     var scrolled = refPoint.x;
@@ -68,5 +69,6 @@ function init(){
       }
     }
   }
+*/
 }
 
