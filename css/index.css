@@ -4,7 +4,11 @@ body {
   background-color: rgb(9,10,25);
   overflow: hidden;
   height: 100%;
-  font-family: 'Open-Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+  list-style-type: none;
 }
 
 #tail {
@@ -28,11 +32,18 @@ body {
 }
 
 #gallery {
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  overflow: scroll;
   position: relative;
-  left: 100px;
+  width: 70vw;
 }
 
 .fades {
+  overflow: hidden;
   opacity: 0;
   transition: opacity 10s;
 }
@@ -81,6 +92,7 @@ a {
   overflow-x: hidden;
   perspective: 1px;
   height: 100vh;
+  overflow-y: hidden;
 }
 
 #cursor {
@@ -169,25 +181,27 @@ a:hover {
 .mtn {
   position: absolute;
   left: 0;
-  min-width: 120vw;
+  height: 90vh;
   bottom: 0;
 }
 
+.label {
+  z-index: 0;
+  position: absolute;
+  top: 13vh;
+}
+
 .black {
-  position: relative;
-  padding: 3vw;
-  left: 25vw;
+  padding: 3vw 3vw 3vw 15vw;
   color: white;
-  width: 45vw;
-  overflow: auto;
-  border: 2px solid white;
-  border-radius: 2vw;
-  z-index: 5;
-  background-color: rgba(1, 1, 1, 0.3);
+  width: 70vw;
+  overflow-y: scroll;
+  z-index: -1;
 }
 
 #abtcap {
-  width: 40%;
+  vertical-align: top;
+  width: 50%;
   display: inline-block;
   margin-left: 15px;
 }
@@ -197,7 +211,8 @@ a:hover {
 }
 
 #profile {
-  width: 50%;
+  width: 25vw;
+  max-width: 300px;
   display: inline-block;
   height: auto;
 }
@@ -240,6 +255,7 @@ a:hover {
 }
 
 .wrapper {
+  overflow-y: hidden;
   display: flex;
   flex-direction: row;
   width: 500vw;
@@ -250,10 +266,13 @@ a:hover {
 }
 
 .pagemenu {
+  position: sticky;
+  top: 25vh;
   font-family: 'Ubuntu', sans-serif;
   line-height: 1.6em;
   text-transform: uppercase;
   font-size: 1.1em;
+  list-style-type: none;
   float: left;
 }
 
@@ -270,25 +289,23 @@ a:hover {
 
 .content {
   width: 100vw;
-  scroll-snap-align: center;
   transition: 2s opacity;
   padding: 100px;
 }
 
 h1 {
-  top: 1vw;
+  position: relative;
   font-size: 5vw;
   color: #DFF2FA;
   font-family: 'Ubuntu', Sans-Serif;
   text-transform: uppercase;
-  position: relative;
   bottom: 0px;
   margin: 0;
-  z-index: -2;
+  z-index: 101;
 }
 
 .foreground {
-  transform: translateZ(-12px) scale(13);
+  transform: translateZ(-3px) scale(4);
   z-index: 1;
   position: absolute;
   bottom: 0;
@@ -297,8 +314,7 @@ h1 {
 }
 
 .midground {
-  transform: translateZ(-15px) scale(16);
-  left: 0;
+  transform: translateZ(-4px) scale(5);
   z-index: -3;
   animation-delay: 1.3s;
   position: absolute;
@@ -306,13 +322,15 @@ h1 {
 }
 
 .background {
-  transform: translateZ(-18px) scale(19);
+  transform: translateZ(-5px) scale(6);
+  position: absolute;
+  bottom: 0;
   z-index: -4;
   animation-delay: 1.6s;
 }
 
 img {
-  height: 60vh;
+  height: 55vh;
   position: relative;
   user-drag: none;
   user-select: none;

@@ -19,11 +19,68 @@ function init(){
   const menu = document.querySelector("#menu");
 
   const star = document.querySelector("#cursor");
-  console.log(star)
+
+  const about = document.getElementsByClassName('about');
+  const projects = document.getElementsByClassName('projects');
+  const art = document.getElementsByClassName('art');
+  const contact = document.getElementsByClassName('contact');
+  let current = 0;
+
+  Array.from(about).forEach(function(x){
+    x.addEventListener('click', function(e) {
+      wrapper.scrollBy({
+        top: $("#about").offset().top,
+        left: $("#about").offset().left,
+        behavior: 'smooth'
+      })
+      content[current].style.opacity = 0;
+      current = 1;
+      MountainUpdate()
+      ArrowUpdate()
+    })
+  })
+
+  Array.from(projects).forEach(function(x){
+    x.addEventListener('click', function(e) {
+      wrapper.scrollBy({
+        top: $("#projects").offset().top,
+        left: $("#projects").offset().left,
+        behavior: 'smooth'
+      })
+      content[current].style.opacity = 0;
+      current = 2;
+      MountainUpdate()
+      ArrowUpdate()
+    })
+  })
+  Array.from(art).forEach(function(x){
+    x.addEventListener('click', function(e) {
+      wrapper.scrollBy({
+        top: $("#art").offset().top,
+        left: $("#art").offset().left,
+        behavior: 'smooth'
+      })
+      content[current].style.opacity = 0;
+      current = 3;
+      MountainUpdate()
+      ArrowUpdate()
+    })
+  })
+  Array.from(contact).forEach(function(x){
+    x.addEventListener('click', function(e) {
+      wrapper.scrollBy({
+        top: $("#contact").offset().top,
+        left: $("#contact").offset().left,
+        behavior: 'smooth'
+      })
+      content[current].style.opacity = 0;
+      current = 4;
+      MountainUpdate()
+      ArrowUpdate()
+    })
+  })
 
   /* keep track of section */
-  let current = 0;
-  console.log(content)
 
   /* arrow click */
   left_arrow.addEventListener('click', function(e) {
@@ -55,7 +112,7 @@ function init(){
       left_arrow.classList.remove("active");
       menu.style.left = ''
     }
-    else if (current == 5) {
+    else if (current == 4) {
       right_arrow.classList.remove("active");
     }
     else {
@@ -79,13 +136,12 @@ function init(){
   }
 
   function MountainUpdate() {
-    console.log(current)
     content[current].style.opacity = 1;
     wrapper.scrollBy({
+      top: $(".content").eq(current).offset().top,
       left: $(".content").eq(current).offset().left,
       behavior: 'smooth'
     })
-    console.log($(".content").eq(0).offset().left)
   }
 
 }
