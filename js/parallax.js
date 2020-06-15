@@ -16,6 +16,7 @@ function init(){
   const midground = document.querySelector('.midground');
 
   const name = document.querySelector("#about");
+  const menu = document.querySelector("#menu");
 
   /* keep track of section */
   let current = 0;
@@ -41,6 +42,7 @@ function init(){
   function ArrowUpdate() {
     if (current == 0) {
       left_arrow.classList.remove("active");
+      menu.style.left = ''
     }
     else if (current == 4) {
       right_arrow.classList.remove("active");

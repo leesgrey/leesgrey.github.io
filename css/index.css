@@ -1,17 +1,18 @@
 body {
   margin: 0;
+  isolation: isolate;
   background-color: #090A19;
-  overflow: hidden; /* prevents "bouncing" out of window */
+  overflow: hidden;
   height: 100%;
   font-family: 'Open-Sans', sans-serif;
 }
 
-a {
-  cursor: pointer;
+#bg {
+  perspective: 1px;
 }
 
-p {
-  margin: 0;
+a {
+  cursor: pointer;
 }
 
 @keyframes fadeIn {
@@ -28,13 +29,9 @@ p {
   animation: fadeIn 1s forwards;
 }
 
-.semifadedIn {
-  opacity: 0;
-  animation: fadeTo 1s 0.5 forwards;
-}
-
 .outer-wrapper {
   overflow-x: hidden;
+  perspective: 1px;
 }
 
 #moon {
@@ -47,7 +44,6 @@ p {
   left: 40px;
   mix-blend-mode: exclusion;
   display: inline-block;
-  z-index: 4;
 }
 
 #caption {
@@ -61,6 +57,7 @@ p {
 #icons {
   position: fixed;
   z-index: 5;
+  position: fixed;
   bottom : 15px;
   right: 15px;
   animation-delay: 1s;
@@ -80,6 +77,7 @@ p {
   margin: 0;
   display: inline-block;
   list-style-type: none;
+  top: 13.1vw;
   animation-delay: 1s;
 }
 
@@ -107,9 +105,8 @@ a:hover {
 }
 
 .mtn {
-  position: absolute; /* relative to background div*/
+  position: absolute;
   left: 0;
-  top: 42vh;
   min-width: 120vw;
   bottom: 0;
 }
@@ -126,7 +123,6 @@ a:hover {
   z-index: 5;
   background-color: rgba(1, 1, 1, 0.3);
 }
-
 
 #abtcap {
   width: 40%;
@@ -175,7 +171,6 @@ a:hover {
   vertical-align: middle;
   animation-delay: 1s;
   mix-blend-mode: exclusion;
-  z-index: 3;
 }
 
 .arrows img {
@@ -186,6 +181,7 @@ a:hover {
   display: flex;
   flex-direction: row;
   width: 420vw;
+  overflow-x: auto;
   height: 100vh;
 }
 
@@ -208,30 +204,37 @@ a:hover {
 }
 
 h1 {
+  top: 1vw;
   font-size: 5vw;
   color: #DFF2FA;
   font-family: 'Ubuntu', Sans-Serif;
   text-transform: uppercase;
   position: relative;
-  top: 33vh;
   bottom: 0px;
   margin: 0;
   z-index: -2;
 }
 
 .foreground {
+  transform: translateZ(-8px) scale(9);
   z-index: 1;
+  position: absolute;
+  bottom: 0;
   pointer-events: none;
   animation-delay: 1s;
 }
 
 .midground {
+  transform: translateZ(-10px) scale(11);
+  left: 0;
   z-index: -3;
   animation-delay: 1.3s;
+  position: absolute;
 
 }
 
 .background {
+  transform: translateZ(-12px) scale(13);
   z-index: -4;
   animation-delay: 1.6s;
 }
