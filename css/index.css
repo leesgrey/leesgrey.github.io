@@ -1,10 +1,40 @@
 body {
   margin: 0;
   isolation: isolate;
-  background-color: #090A19;
+  background-color: rgb(9,10,25);
   overflow: hidden;
   height: 100%;
   font-family: 'Open-Sans', sans-serif;
+}
+
+#tail {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: white;
+    z-index: 102;
+    transition-duration: 200ms;
+    pointer-events: none;
+    -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    mix-blend-mode: exclusion;
+    transition-timing-function: ease-out;
+}
+
+#gallery {
+  position: relative;
+  left: 100px;
+}
+
+.fades {
+  opacity: 0;
+  transition: opacity 10s;
 }
 
 #bg {
@@ -29,11 +59,37 @@ a {
   animation: fadeIn 1s forwards;
 }
 
+@keyframes unfold {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-width: 50vh;
+    opacity: 1;
+  }
+}
+
+.verticalUnfold{
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  animation: unfold 3s forwards;
+}
+
 .outer-wrapper {
   overflow-x: hidden;
   perspective: 1px;
   height: 100vh;
-  perspective-origin: 50% 75%;
+}
+
+#cursor {
+  background-color: white;
+  height: 10px;
+  position: absolute;
+  float: left;
+  top: 100px;
+  width: 10px;
 }
 
 #moon {
@@ -81,6 +137,7 @@ a {
   font-size: 1.3em;
   margin: 0;
   display: inline-block;
+  height: 1em;
   list-style-type: none;
   top: 13.1vw;
   animation-delay: 1s;
@@ -214,7 +271,7 @@ a:hover {
 .content {
   width: 100vw;
   scroll-snap-align: center;
-  transition: 0.5s opacity;
+  transition: 2s opacity;
   padding: 100px;
 }
 
@@ -257,6 +314,12 @@ h1 {
 img {
   height: 60vh;
   position: relative;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 ::-webkit-scrollbar {

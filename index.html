@@ -12,6 +12,7 @@
 
 <body>
   <!-- outer-wrapper, flipped left to achieve horizontal scroll - right side on top -->
+  <div id="tail"></div>
   <div id="icons" class="fadedIn'">
     <a href="https://www.linkedin.com/in/greysieunlee/"><img src="./assets/linkedin.png"/></a>
     <a href="https://github.com/leesgrey"><img src="./assets/github.png"/></a>
@@ -19,7 +20,7 @@
     <img class="arrows" id="leftarrow" src="./assets/leftarrow.png">
     <img class="arrows fadedIn active" id="rightarrow" src="./assets/rightarrow.png">
   </div>
-  <div class="outer-wrapper">
+  <div class="outer-wrapper" style="perspective-origin: 50% 75%">
     <div id="moon" class="fadedIn"></div>
     <img class="mtn foreground fadedIn" src="./assets/front_mountains.svg"/>
     <img class="mtn midground fadedIn" src="./assets/mid_mountains.svg"/>
@@ -43,7 +44,6 @@
             <a class="menuLink">Contact</a>
           </li>
         </ul>
-        <p id="caption" class="fadedIn">(under construction!)</p>
       </div>
 
       <div id="about" href="#about" class="content fades">
@@ -64,8 +64,7 @@
         <div class="black">
           <img id="profile" src="./assets/me.jpeg"/>
           <div id="abtcap">
-            <p>Hello! I'm a computer science student at the University of Toronto with an interest in Human-Computer Interaction and Visual Computing.</p>
-            <p>As an artist, dancer, and musician, I want to find new ways to combine art and technology.</p>
+            <p>Hello! My name's Grey, and I'm a computer science student at the University of Toronto with an interest in Human-Computer Interaction and game design.</p>
           </div>
         </div>
       </div>
@@ -105,9 +104,9 @@
             </li>
           </ul>
         </div>
-        <div class="black">
+        <div id="gallery">
           <img src="./assets/rad.png"/>
-          <p>Coming soon!</p>
+          <img src="./assets/cyber.png"/>
         </div>
       </div>
 
