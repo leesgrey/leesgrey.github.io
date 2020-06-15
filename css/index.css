@@ -66,6 +66,14 @@ a {
   cursor: pointer;
 }
 
+li {
+  transition: transform 0.5s;
+}
+
+li:hover {
+  transform: scale(1.1);
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -154,7 +162,7 @@ a {
   transition: transform 0.3s;
 }
 
-#icons img:hover {
+.arrows:hover {
   transform: scale(1.2);
 }
 
