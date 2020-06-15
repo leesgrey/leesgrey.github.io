@@ -32,6 +32,8 @@ a {
 .outer-wrapper {
   overflow-x: hidden;
   perspective: 1px;
+  height: 100vh;
+  perspective-origin: 50% 75%;
 }
 
 #moon {
@@ -230,7 +232,7 @@ h1 {
   z-index: -3;
   animation-delay: 1.3s;
   position: absolute;
-
+  bottom: 0;
 }
 
 .background {
