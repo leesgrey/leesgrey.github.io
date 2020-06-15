@@ -80,8 +80,6 @@ function init(){
     })
   })
 
-  /* keep track of section */
-
   /* arrow click */
   left_arrow.addEventListener('click', function(e) {
     content[current].style.opacity = 0;
@@ -101,9 +99,13 @@ function init(){
   })
 
   $(document).bind('mousemove', function(e){
-      $('#tail').css({
+      $('#tail1').css({
          left:  e.pageX - 10,
          top:   e.pageY - 10
+      });
+      $('#tail2').css({
+         left:  e.pageX - 5,
+         top:   e.pageY - 5
       });
   });
 
