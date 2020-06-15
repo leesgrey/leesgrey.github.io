@@ -21,7 +21,6 @@ function init(){
   /* keep track of section */
   let current = 0;
 
-  console.log(current);
   /* arrow click */
   left_arrow.addEventListener('click', function(e) {
     current--;

@@ -44,8 +44,10 @@ a {
   position: fixed;
   top: 50px;
   left: 40px;
+  position: sticky;
   mix-blend-mode: exclusion;
   display: inline-block;
+  z-index: 100;
 }
 
 #caption {
@@ -57,6 +59,7 @@ a {
 }
 
 #icons {
+  float: left;
   position: fixed;
   z-index: 5;
   position: fixed;
@@ -182,9 +185,19 @@ a:hover {
 .wrapper {
   display: flex;
   flex-direction: row;
-  width: 420vw;
+  width: 500vw;
   overflow-x: auto;
   height: 100vh;
+  top: 0;
+  position: absolute;
+}
+
+.pagemenu {
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1.6em;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  float: left;
 }
 
 #name {
@@ -218,7 +231,7 @@ h1 {
 }
 
 .foreground {
-  transform: translateZ(-8px) scale(9);
+  transform: translateZ(-12px) scale(13);
   z-index: 1;
   position: absolute;
   bottom: 0;
@@ -227,7 +240,7 @@ h1 {
 }
 
 .midground {
-  transform: translateZ(-10px) scale(11);
+  transform: translateZ(-15px) scale(16);
   left: 0;
   z-index: -3;
   animation-delay: 1.3s;
@@ -236,7 +249,7 @@ h1 {
 }
 
 .background {
-  transform: translateZ(-12px) scale(13);
+  transform: translateZ(-18px) scale(19);
   z-index: -4;
   animation-delay: 1.6s;
 }
