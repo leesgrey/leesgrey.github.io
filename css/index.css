@@ -164,6 +164,7 @@ li:hover {
 }
 
 #moon {
+  cursor: pointer;
   text-align: center;
   line-height: 110px;
   width: 110px;
@@ -182,7 +183,7 @@ li:hover {
 }
 
 #moon:hover {
-  transform: scale(1.3);
+  transform: scale(1.1);
   color: rgb(9,10,25);
 }
 
@@ -277,19 +278,16 @@ a:hover {
 
 #border {
   display: inline-block;
-  padding: -20px;
-  border: 1px solid white;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 #profile {
   position: relative;
-  top: -20px;
-  left: 20px;
-  display: inline-block;
+  display: block;
+  top: -6px;
+  left: 6px;
   width: 20vw;
-  drop-shadow: 6px 6px 0px
-  background-color: red;
-  padding: 5px;
 }
 
 .landing {

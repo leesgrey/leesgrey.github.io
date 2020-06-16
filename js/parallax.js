@@ -26,6 +26,17 @@ function init(){
   const contact = document.getElementsByClassName('contact');
   let current = 0;
 
+
+  moon.addEventListener('click', function(e) {
+    wrapper.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
+    current = 0;
+    MountainUpdate();
+    ArrowUpdate();
+  })
   Array.from(about).forEach(function(x){
     x.addEventListener('click', function(e) {
       wrapper.scrollBy({
