@@ -77,7 +77,6 @@ p {
   width: 70vw;
   margin-left: 10vw;
   padding-top: 5vh;
-  padding-bottom: 300vh;
 }
 
 .break {
@@ -445,6 +444,7 @@ h1 {
   -ms-user-select: none;
   outline: 0px solid #fff;
   outline-offset: -10px;
+  margin-bottom: 100px;
 }
 
 #gallery img:hover {
