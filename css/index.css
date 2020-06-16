@@ -141,7 +141,14 @@ li:hover {
   animation: unfold 3s forwards;
 }
 
+@keyframes rise {
+  0% {perspective-origin: 90% 75%;}
+  100% {perspective-origin: 100% 65%}
+}
+
 .outer-wrapper {
+  perspective-origin: 90% 75%;
+  animation: rise 3s forwards;
   overflow-x: hidden;
   perspective: 1px;
   height: 100vh;
