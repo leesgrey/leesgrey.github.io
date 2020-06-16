@@ -8,8 +8,25 @@ body {
   user-select: none;
 }
 
+#aboutcontent {
+  position: absolute;
+  top: 20vh;
+  width: 70vw;
+  margin-left: 15vw;
+  padding-top: 5vh;
+  padding-bottom: 10vh;
+}
+
 ul {
   list-style-type: none;
+}
+
+p {
+  color: white;
+}
+
+.aboutcaption {
+  display: inline-block;
 }
 
 #tail1 {
@@ -48,20 +65,31 @@ ul {
 }
 
 #gallery {
-  z-index: 100;
+  height: 100vh;
+  z-index: 2;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  overflow: scroll;
-  position: relative;
+  overflow-y: scroll;
+  position: absolute;
   top: 0;
   width: 70vw;
+  margin-left: 10vw;
+  padding-top: 5vh;
+  padding-bottom: 10vh;
+}
+
+.break {
+  flex-basis: 100%;
 }
 
 .fades {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   opacity: 0;
+  flex-wrap: wrap;
   transition: opacity 10s;
 }
 
@@ -157,7 +185,7 @@ li:hover {
   z-index: 5;
   position: fixed;
   bottom : 15px;
-  right: 15px;
+  right: 25px;
   animation-delay: 1s;
 }
 
@@ -211,7 +239,7 @@ a:hover {
 .mtn {
   position: absolute;
   left: 0;
-  height: 90vh;
+  height: 80vh;
   bottom: 0;
 }
 
@@ -219,14 +247,6 @@ a:hover {
   z-index: 0;
   position: absolute;
   top: 13vh;
-}
-
-.black {
-  padding: 3vw 3vw 3vw 15vw;
-  color: white;
-  width: 70vw;
-  overflow-y: scroll;
-  z-index: -1;
 }
 
 #abtcap {
@@ -241,10 +261,8 @@ a:hover {
 }
 
 #profile {
-  width: 25vw;
-  max-width: 300px;
   display: inline-block;
-  height: auto;
+  width: 10vh;
 }
 
 .landing {
@@ -265,8 +283,8 @@ a:hover {
 }
 
 #leftarrow:hover {
-  filter: drop-shadow(25px 0px 0px rgba(255, 255, 255, 0.3)) drop-shadow(25px 0px 0px rgba(255, 255, 255, 0.3));
-  -webkit-filter: drop-shadow(25px 0px 0px rgba(255, 255, 255, 0.3)) drop-shadow(25px 0px 0px rgba(255, 255, 255, 0.3));
+  filter: drop-shadow(10px 0px 0px rgba(255, 255, 255, 0.3)) drop-shadow(10px 0px 0px rgba(255, 255, 255, 0.3));
+  -webkit-filter: drop-shadow(10px 0px 0px rgba(255, 255, 255, 0.3)) drop-shadow(10px 0px 0px rgba(255, 255, 255, 0.3));
 }
 
 #rightarrow {
@@ -275,8 +293,8 @@ a:hover {
 }
 
 #rightarrow:hover {
-  filter: drop-shadow(-25px 0px 0px rgba(255, 255, 255, 0.3)) drop-shadow(-25px 0px 0px rgba(255, 255, 255, 0.3));
-  -webkit-filter: drop-shadow(-25px 0px 0px rgba(255, 255, 255, 0.3)) drop-shadow(-25px 0px 0px rgba(255, 255, 255, 0.3));
+  filter: drop-shadow(-10px 0px 0px rgba(255, 255, 255, 0.3)) drop-shadow(-10px 0px 0px rgba(255, 255, 255, 0.3));
+  -webkit-filter: drop-shadow(-10px 0px 0px rgba(255, 255, 255, 0.3)) drop-shadow(-10px 0px 0px rgba(255, 255, 255, 0.3));
   filter:
 }
 
@@ -309,8 +327,8 @@ a:hover {
 }
 
 .pagemenu {
-  position: sticky;
-  top: 25vh;
+  position: absolute;
+  top: 21vh;
   font-family: 'Ubuntu', sans-serif;
   line-height: 1.6em;
   text-transform: uppercase;
@@ -349,8 +367,8 @@ h1 {
 
 .foreground {
   transform: translateZ(-3px) scale(4);
-  z-index: 1;
-  position: absolute;
+  z-index: 10;
+  position: relative;
   bottom: 0;
   pointer-events: none;
   animation-delay: 1s;
@@ -362,6 +380,7 @@ h1 {
   animation-delay: 1.3s;
   position: absolute;
   bottom: 0;
+  left: 100vw;
 }
 
 .background {
@@ -372,7 +391,7 @@ h1 {
   animation-delay: 1.6s;
 }
 
-img {
+#gallery img {
   height: 55vh;
   position: relative;
   user-drag: none;
