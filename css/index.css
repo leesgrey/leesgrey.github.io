@@ -305,7 +305,6 @@ a:hover {
 
 #leftarrow {
   left: 30px;
-  display: none;
   transition: filter 0.5s ease-in-out;
 }
 
@@ -322,20 +321,22 @@ a:hover {
 #rightarrow:hover {
   filter: drop-shadow(-10px 0px 0px rgba(255, 255, 255, 0.3)) drop-shadow(-10px 0px 0px rgba(255, 255, 255, 0.3));
   -webkit-filter: drop-shadow(-10px 0px 0px rgba(255, 255, 255, 0.3)) drop-shadow(-10px 0px 0px rgba(255, 255, 255, 0.3));
-  filter:
 }
 
-.active {
-  cursor: pointer;
-}
 
 .arrows {
+  display: none;
   height: 12%;
   position: fixed;
   top: 45%;
   vertical-align: middle;
   animation-delay: 1s;
   mix-blend-mode: exclusion;
+}
+
+.active {
+  display: inline;
+  cursor: pointer;
 }
 
 .arrows img {
