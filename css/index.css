@@ -443,7 +443,6 @@ h1 {
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  transition: 0.1s outline;
   outline: 0px solid #fff;
   outline-offset: -10px;
 }
