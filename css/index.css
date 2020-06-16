@@ -447,12 +447,14 @@ h1 {
   -webkit-user-select: none;
   -ms-user-select: none;
   outline: 0px solid #fff;
-  outline-offset: -10px;
+  outline-offset: 0px;
   margin-bottom: 100px;
+  transition: outline-offset 0.5s;
 }
 
 #gallery img:hover {
     outline: 1px solid #fff;
+    outline-offset: -10px;
 }
 
 ::-webkit-scrollbar {
