@@ -65,6 +65,8 @@ p {
 }
 
 #gallery {
+-ms-overflow-style: none; /* IE 11 */
+    scrollbar-width: none; /* Firefox 64 */
   height: 100vh;
   z-index: 2;
   display: flex;
@@ -144,6 +146,7 @@ li:hover {
   0% {perspective-origin: 90% 75%;}
   100% {perspective-origin: 100% 65%;}
 }
+
 .outer-wrapper {
   perspective-origin: 90% 75%;
   animation: rise 3s forwards;
@@ -452,6 +455,7 @@ h1 {
 }
 
 ::-webkit-scrollbar {
+  display: none;
     height: 0;
     width: 0px;
     background: transparent;
