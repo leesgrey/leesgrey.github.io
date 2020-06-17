@@ -3,33 +3,17 @@ document.addEventListener('DOMContentLoaded', init, false);
 function init(){
   /* element selection */
   const wrapper = document.querySelector('.outer-wrapper');
-  const moon = document.querySelector('#moon');
-
-  const left_arrow = document.querySelector('#leftarrow');
-  const right_arrow = document.querySelector('#rightarrow');
-
   const content = document.getElementsByClassName('content');
   const pages = $(".content");
-
-  const foreground = document.querySelector('.foreground');
-  const background = document.querySelector('.background');
-  const midground = document.querySelector('.midground');
-
-  const menu = document.querySelector("#menu");
-
-  const star = document.querySelector("#cursor");
-
-  const about = document.getElementsByClassName('about');
-  const projects = document.getElementsByClassName('projects');
-  const art = document.getElementsByClassName('art');
-  const contact = document.getElementsByClassName('contact');
 
   // tracks page
   let current = 0;
 
+  // set page to landing upon load
   ChangePage(0);
 
-  moon.addEventListener('click', function(e) {
+  // scroll to landing on moon click
+  document.querySelector("#moon").addEventListener('click', function(e) {
     wrapper.scrollTo({
       top: 0,
       left: 0,
@@ -39,27 +23,24 @@ function init(){
   })
 
   // menu buttons
-  Array.from(about).forEach(function(x){
+  Array.from(document.getElementsByClassName('about')).forEach(function(x){
     x.addEventListener('click', function() { ChangePage(1); });
   })
-
-  Array.from(projects).forEach(function(x){
+  Array.from(document.getElementsByClassName('projects')).forEach(function(x){
     x.addEventListener('click', function() { ChangePage(2); });
   })
-
-  Array.from(art).forEach(function(x){
+  Array.from(document.getElementsByClassName('art')).forEach(function(x){
     x.addEventListener('click', function() { ChangePage(3); });
   })
-
-  Array.from(contact).forEach(function(x){
+  Array.from(document.getElementsByClassName('contact')).forEach(function(x){
     x.addEventListener('click', function() { ChangePage(4); });
   })
 
-  /* arrow click */
-  left_arrow.addEventListener('click', function(e) { ChangePage(current - 1); });
+  // arrow buttons
+  document.querySelector('#leftarrow').addEventListener('click', function(e) { ChangePage(current - 1); });
+  document.querySelector('#rightarrow').addEventListener('click', function(e) { ChangePage(current + 1); });
 
-  right_arrow.addEventListener('click', function(e) { ChangePage(current + 1); });
-
+  // fun cursor :)
   $(document).bind('mousemove', function(e){
       $('#tail1').css({
          left:  e.pageX - 10,
@@ -76,10 +57,9 @@ function init(){
     content[current].style.opacity = 0;
 
     current = pagenum;
-    console.log(current);
 
-    let topref;
-    let leftref;
+    const left_arrow = document.querySelector('#leftarrow');
+    const right_arrow = document.querySelector('#rightarrow');
 
     // update visible arrows
     if (current == 0) {
