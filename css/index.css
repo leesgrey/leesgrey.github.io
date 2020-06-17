@@ -10,7 +10,7 @@ body {
 
 #aboutcontent {
   position: absolute;
-  top: 20vh;
+  top: 23vh;
   width: 70vw;
   margin-left: 15vw;
   padding-top: 5vh;
@@ -23,10 +23,6 @@ ul {
 
 p {
   color: white;
-}
-
-.aboutcaption {
-  display: inline-block;
 }
 
 #tail1 {
@@ -267,29 +263,38 @@ a:hover {
   top: 13vh;
 }
 
-#abtcap {
+.abtcap {
   vertical-align: top;
   width: 50%;
   display: inline-block;
   margin-left: 15px;
-}
-
-#abtcap p {
-  margin-bottom: 15px;
+  color: rgb(9, 10, 25);
+  margin: 20px 20px 20px 30px;
 }
 
 #border {
+  background-color: #fff;
+  width: 80%;
   display: inline-block;
   margin: 0;
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  float: left;
+  box-shadow: 15px 15px 0px #F2D9A1;
+  transition: box-shadow 1s;
+}
+
+#border:hover {
+  box-shadow: 10px 10px 0px orange;
 }
 
 #profile {
+  outline: 1px solid #fff;
+  outline-offset: -10px;
   position: relative;
-  display: block;
-  top: -6px;
-  left: 6px;
+  display: inline-block;
+  top: -10px;
+  left: 10px;
   width: 20vw;
+  margin: 0;
 }
 
 .landing {
@@ -388,10 +393,6 @@ a:hover {
   z-index: 2;
   mix-blend-mode: exclusion;
   transition: 2s color;
-}
-
-#name:ddhover {
-
 }
 
 .content {
