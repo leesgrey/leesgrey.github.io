@@ -7,45 +7,56 @@
   <meta name=”viewport” content=”width=device-width, initial-scale=1″>
   <link rel="stylesheet" type="text/css" href="./css/index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="./assets/favicon.png"/>
 </head>
 
 <body>
-  <!-- outer-wrapper, flipped left to achieve horizontal scroll - right side on top -->
+  <!-- cursor -->
   <div id="tail1" class="tail fadedIn"></div>
   <div id="tail2" class="tail fadedIn"></div>
+
   <div id="icons" class="fadedIn'">
     <a href="https://www.linkedin.com/in/greysieunlee/"><img src="./assets/linkedin.png"/></a>
     <a><img src="./assets/github.png"/></a>
     <a href="mailto:sieungrey.lee@mail.utoronto.ca"><img src="./assets/email.png"/></a>
+    <!-- arrows -->
     <svg class="arrows fadedIn active" id="leftarrow" xmlns="http://www.w3.org/2000/svg" width="53" height="70" viewBox="0 0 53 69.9"><style>.a{fill:none;stroke-linecap:round;stroke-width:10;stroke:#fff;}</style><g data-name="Group 1" transform="translate(-1582.523 -419.523)"><line data-name="Line 1" x1="39" y2="28" transform="translate(1589.5 426.5)" class="a"/><line data-name="Line 2" x1="39" y1="28" transform="translate(1589.5 454.46)" class="a"/></g></svg>
     <svg class="arrows fadedIn active" id="rightarrow" xmlns="http://www.w3.org/2000/svg" width="53" height="70" viewBox="0 0 53 69.9"><style>.a{fill:none;stroke-linecap:round;stroke-width:10;stroke:#fff;}</style><g data-name="Group 1" transform="translate(1635.477 489.398)rotate(180)"><line data-name="Line 1" x1="39" y2="28" transform="translate(1589.5 426.5)" class="a"/><line data-name="Line 2" x1="39" y1="28" transform="translate(1589.5 454.46)" class="a"/></g></svg>
   </div>
+
   <div class="outer-wrapper">
     <div id="moon" class="fadedIn"></div>
     <img class="mtn foreground fadedIn" src="./assets/front_mountains.svg"/>
     <img class="mtn midground fadedIn" src="./assets/mid_mountains.svg"/>
     <img class="mtn background fadedIn" src="./assets/back_mountains.svg"/>
 
-    <!-- wrapper holds content -->
+    <!-- holds scrollable content -->
     <div class="wrapper">
+
       <div id="start" class="landing content">
-        <h1 id="name">Grey Lee</h1>
-        <ul id="menu" class="fadedIn">
-          <li>
-            <a class="menuLink about"">About</a>
-          </li>
-          <li>
-            <a class="menuLink projects">Projects</a>
-          </li>
-          <li>
-            <a class="menuLink art">Art</a>
-          </li>
-          <li>
-            <a class="menuLink contact">Contact</a>
-          </li>
-        </ul>
+        <div id="lefthalf">
+          <div id="leftcontent">
+            <h1 id="name" class="fadedIn">Grey Lee</h1>
+            <p id="catchphrase" class="fadedIn">I'm a computer science student with a passion for art and storytelling.</p>
+          </div>
+        </div>
+        <div id="righthalf" class="fadedIn">
+          <ul id="menu" >
+            <li>
+              <a class="menuLink about"">About</a>
+            </li>
+            <li>
+              <a class="menuLink projects">Projects</a>
+            </li>
+            <li>
+              <a class="menuLink art">Art</a>
+            </li>
+            <li>
+              <a class="menuLink contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div id="about" href="#about" class="content fades">
@@ -63,7 +74,6 @@
             </li>
           </ul>
         </div>
-        <div class="break"></div>
         <div id="aboutcontent">
           <div id="border">
           <img id="profile" src="./assets/me.jpeg"/>
@@ -95,29 +105,28 @@
 
       <div id="art" href="#art" class="content fades">
         <h1 class="label">Art</h1>
-          <div class="pagemenu">
-            <ul>
-              <li>
-                <a class="menuLink about">About</a>
-              </li>
-              <li>
-                <a class="menuLink projects">Projects</a>
-              </li>
-              <li>
-                <a class="menuLink contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-        <div class="break"></div>
-            <div id="gallery">
-              <img src="./assets/rad.png"/>
-              <img src="./assets/cyber.png"/>
-              <img src="./assets/charms.png"/>
-              <img src="./assets/quartet.png"/>
-              <img src="./assets/erato.png"/>
-              <img src="./assets/urania.png"/>
-              <img src="./assets/protag.png"/>
-            </div>
+        <div class="pagemenu">
+          <ul>
+            <li>
+              <a class="menuLink about">About</a>
+            </li>
+            <li>
+              <a class="menuLink projects">Projects</a>
+            </li>
+            <li>
+              <a class="menuLink contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div id="gallery">
+          <img src="./assets/rad.png"/>
+          <img src="./assets/cyber.png"/>
+          <img src="./assets/charms.png"/>
+          <img src="./assets/quartet.png"/>
+          <img src="./assets/erato.png"/>
+          <img src="./assets/urania.png"/>
+          <img src="./assets/protag.png"/>
+        </div>
       </div>
 
       <div id="contact" href="#contact" class="content fades">
@@ -136,11 +145,11 @@
           </ul>
         </div>
         <div class="break"></div>
-          <ul>
-            <li><a href="">GitHub</a></li>
-            <li><a href="">LinkedIn</a></li>
-            <li><a href="">Email</a></li>
-          </ul>
+        <ul>
+          <li><a href="">GitHub</a></li>
+          <li><a href="">LinkedIn</a></li>
+          <li><a href="">Email</a></li>
+        </ul>
       </div>
     </div>
   </div>
