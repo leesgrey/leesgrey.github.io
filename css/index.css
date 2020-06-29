@@ -14,6 +14,10 @@ p {
   color: white;
 }
 
+.break {
+  flex-basis: 100%;
+}
+
 /* fun cursor :) */
 .tail {
     position: absolute;
@@ -29,10 +33,6 @@ p {
       -o-user-select: none;
     mix-blend-mode: exclusion;
     transition-timing-function: ease-out;
-}
-
-.break {
-  flex-basis: 100%;
 }
 
 #tail1 {
@@ -52,6 +52,7 @@ p {
   transition-duration: 200ms;
 }
 
+/* landing page */
 #lefthalf {
   height: 100%;
   width: 65%;
@@ -92,6 +93,15 @@ p {
   animation-delay: 1s;
 }
 
+@keyframes expand {
+  from {
+    padding: 0px 2.5em;
+  }
+  to {
+    padding: 100px 2.5em;
+  }
+}
+
 #menu {
   border-left: 1px solid #fff;
   font-family: 'Ubuntu', sans-serif;
@@ -102,17 +112,8 @@ p {
   overflow-y: hidden;
   vertical-align: middle;
   animation: expand 3.5s forwards;
-  animation-delay: 1s;
+  animation-delay: 0.9s;
   padding: 0px 2.5em;
-}
-
-@keyframes expand {
-  from {
-    padding: 0px 2.5em;
-  }
-  to {
-    padding: 100px 2.5em;
-  }
 }
 
 #menu li {
@@ -142,6 +143,35 @@ a:hover {
   color: #F2D9A1;
 }
 
+/* page header */
+h1 {
+  position: relative;
+  font-size: 5vw;
+  color: #DFF2FA;
+  font-family: 'Ubuntu', Sans-Serif;
+  text-transform: uppercase;
+  bottom: 0px;
+  margin: 0;
+  display: inline-block;
+}
+
+.pagemenu {
+  float: right;
+  margin-top: 1em;
+  display: inline-block;
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1.6em;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  list-style-type: none;
+}
+
+.pagemenu li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+
 #aboutcontent {
   position: absolute;
   top: 23vh;
@@ -154,7 +184,7 @@ a:hover {
 #gallery {
   scrollbar-width: none;
     -ms-overflow-style: none;
-  height: 100vh;
+  height: 75vh;
   z-index: 2;
   display: flex;
   flex-direction: row;
@@ -162,7 +192,7 @@ a:hover {
   justify-content: space-evenly;
   overflow-y: scroll;
   position: absolute;
-  top: 0;
+  bottom: 0;
   width: 70vw;
   margin-left: 10vw;
   padding-top: 5vh;
@@ -306,11 +336,6 @@ li:hover {
   bottom: 0;
 }
 
-.label {
-  z-index: 0;
-  position: absolute;
-  top: 13vh;
-}
 
 .abtcap {
   vertical-align: top;
@@ -407,34 +432,12 @@ li:hover {
   position: absolute;
 }
 
-.pagemenu {
-  position: absolute;
-  top: 21vh;
-  font-family: 'Ubuntu', sans-serif;
-  line-height: 1.6em;
-  text-transform: uppercase;
-  font-size: 1.1em;
-  list-style-type: none;
-  float: left;
-}
-
-
 .content {
   width: 100vw;
   transition: 2s opacity;
   padding: 100px;
 }
 
-h1 {
-  position: relative;
-  font-size: 5vw;
-  color: #DFF2FA;
-  font-family: 'Ubuntu', Sans-Serif;
-  text-transform: uppercase;
-  bottom: 0px;
-  margin: 0;
-  z-index: 101;
-}
 
 .foreground {
   transform: translateZ(-3px) scale(4);
@@ -487,4 +490,38 @@ h1 {
     height: 0;
     width: 0px;
     background: transparent;
+}
+
+.pagecontent {
+  width: 100%;
+  text-align: center;
+}
+
+.links {
+  margin-top: 10%;
+  display: inline-block;
+}
+
+.pair {
+  margin: 0 50px;
+  display: inline-block;
+}
+
+
+.pair img {
+  filter: brightness(0) invert(1);
+  width: 5em;
+  transition: transform 0.5s;
+}
+
+.pair img:hover {
+  transform: scale(1.1);
+}
+
+#cute {
+  display: inline-block;
+  border-top: 1px solid #fff;
+  padding-top: 25px;
+  width: 50%;
+  font-size: 20px;
 }
