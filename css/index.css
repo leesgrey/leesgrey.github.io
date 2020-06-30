@@ -200,11 +200,8 @@ h1 {
 }
 
 .fades {
-  display: flex;
-  flex-direction: column;
   overflow: hidden;
   opacity: 0;
-  flex-wrap: wrap;
   transition: opacity 10s;
 }
 
@@ -347,7 +344,8 @@ li:hover {
 }
 
 .slide img{
-  width: 30%;
+  max-width: 40%;
+  max-height: 50vh;
   float: left;
   margin: 0 20px 20px 20px;
 }
