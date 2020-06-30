@@ -40,6 +40,34 @@ function init(){
   document.querySelector('#leftarrow').addEventListener('click', function(e) { ChangePage(current - 1); });
   document.querySelector('#rightarrow').addEventListener('click', function(e) { ChangePage(current + 1); });
 
+  // project slideshow
+  const slides = document.querySelectorAll('.slide');
+  const slidemenu = document.querySelector('#slideshowmenu');
+
+  const projects = ["Personal Site", "Study Aboard Matching", "Logic2020", "Team Garbage", "GameCentre", "Musichar"];
+  let current_slide = 0;
+
+  for (let i = 0; i<projects.length; i++){
+    console.log(projects[i])
+    let projectlink = document.createElement("li");
+    projectlink.innerText = projects[i];
+
+    projectlink.addEventListener('click', function(e) {
+      // fade current page
+      slides[current_slide].style.opacity = 0;
+      setTimeout(function() {
+        // remove page from flow
+        slides[current_slide].classList.remove("active");
+        // set add next page
+        slides[i].classList.add("active");
+        // fade in
+        slides[i].style.opacity = 1;
+        current_slide = i;
+      }, 500)
+    })
+    slidemenu.appendChild(projectlink)
+  }
+
   // fun cursor :)
   $(document).bind('mousemove', function(e){
       $('#tail1').css({

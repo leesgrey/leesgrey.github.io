@@ -6,6 +6,7 @@ body {
   user-select: none;
 }
 
+
 ul {
   list-style-type: none;
 }
@@ -328,7 +329,47 @@ li:hover {
   filter: brightness(100);
 }
 
+#slideshow {
+  margin: 10px 100px;
+  text-align: left;
+  padding-top: 20px;
+}
 
+.slide{
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  display: block
+}
+
+.slide img{
+  width: 30%;
+  float: left;
+  margin: 0 20px 20px 20px;
+}
+
+h2 {
+  margin-top: 10px;
+  margin-bottom: 0;
+  text-align: left;
+  font-family: 'Ubuntu', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 2em;
+  border-bottom: 1px solid #fff;
+  display: inline-block;
+  padding-bottom: 10px;
+  padding-right: 50px;
+}
+
+hr {
+  width: 500px;
+  text-align: left;
+}
 .mtn {
   position: absolute;
   left: 0;
@@ -495,10 +536,29 @@ li:hover {
 .pagecontent {
   width: 100%;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#slideshowmenu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.projectlink{
+  font-style: italic;
+}
+
+#slideshowmenu li {
+  display: inline-block;
+  color: white;
+  margin: 0 10px;
 }
 
 .links {
   margin-top: 10%;
+  flex-basis: 100%;
   display: inline-block;
 }
 
@@ -516,6 +576,10 @@ li:hover {
 
 .pair img:hover {
   transform: scale(1.1);
+}
+
+#cutecontainer{
+  flex-basis: 100%;
 }
 
 #cute {
