@@ -44,7 +44,7 @@ function init(){
   const slides = document.querySelectorAll('.slide');
   const slidemenu = document.querySelector('#slideshowmenu');
 
-  const projects = ["Personal Site", "Study Aboard Matching", "Logic2020", "Team Garbage", "GameCentre", "Musichar"];
+  const projects = ["Musichar", "Personal Site", "Study Aboard Matching", "Logic2020", "Team Garbage", "GameCentre"];
   let current_slide = 0;
 
   for (let i = 0; i<projects.length; i++){
