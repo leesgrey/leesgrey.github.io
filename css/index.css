@@ -323,7 +323,6 @@ li:hover {
   width: 3vw;
   min-width: 32px;
   height: auto;
-  filter: brightness(100);
 }
 
 #slideshow {
@@ -567,8 +566,7 @@ hr {
 
 
 .pair img {
-  filter: brightness(0) invert(1);
-  width: 5em;
+  height: 5em;
   transition: transform 0.5s;
 }
 
