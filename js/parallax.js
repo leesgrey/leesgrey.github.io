@@ -1,68 +1,90 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', init, false);
 function init(){
-  /* element selection */
+  // element selection
   const wrapper = document.querySelector('.outer-wrapper');
   const content = document.getElementsByClassName('content');
+  const left_arrow = document.querySelector('#leftarrow');
+  const right_arrow = document.querySelector('#rightarrow');
   const pages = $(".content");
 
-  // tracks page
-  let current = 0;
+  let currentPage = 0;
 
-  // set page to landing upon load
-  ChangePage(0);
+  function changePage(newPage){
+    // make old page invisible
+    content[currentPage].style.opacity = 0;
+
+    // update visible arrows
+    if (newPage == 0) {
+      left_arrow.classList.remove("active");
+      right_arrow.classList.add("active");
+    }
+    else if (newPage == pages.length - 1) {
+      left_arrow.classList.add("active");
+      right_arrow.classList.remove("active");
+    }
+    else {
+      left_arrow.classList.add("active");
+      right_arrow.classList.add("active");
+    }
+
+    // scroll to page
+    wrapper.scrollBy({
+      top: pages.eq(newPage).offset().top,
+      left: pages.eq(newPage).offset().left,
+      behavior: 'smooth'
+    });
+  
+    // make new page visible
+    content[newPage].style.opacity = 1;
+
+    currentPage = newPage;
+  }
+
+  changePage(0); // set page to landing upon load
 
   // scroll to landing on moon click
-  document.querySelector("#moon").addEventListener('click', function(e) {
+  document.querySelector("#moon").addEventListener('click', () => {
+    // TODO: revisit overlapping scrolls
     wrapper.scrollTo({
       top: 0,
       left: 0,
       behavior: 'smooth'
     })
-    ChangePage(0);
+    changePage(0);
   })
 
   // menu buttons
-  Array.from(document.getElementsByClassName('about')).forEach(function(x){
-    x.addEventListener('click', function() { ChangePage(1); });
-  })
-  Array.from(document.getElementsByClassName('projects')).forEach(function(x){
-    x.addEventListener('click', function() { ChangePage(2); });
-  })
-  Array.from(document.getElementsByClassName('art')).forEach(function(x){
-    x.addEventListener('click', function() { ChangePage(3); });
-  })
-  Array.from(document.getElementsByClassName('contact')).forEach(function(x){
-    x.addEventListener('click', function() { ChangePage(4); });
-  })
+  Array.from(document.getElementsByClassName('menuLink')).forEach((link, i) => {
+    link.addEventListener('click', () => changePage(i + 1));
+  });
 
   // arrow buttons
-  document.querySelector('#leftarrow').addEventListener('click', function(e) { ChangePage(current - 1); });
-  document.querySelector('#rightarrow').addEventListener('click', function(e) { ChangePage(current + 1); });
+  document.querySelector('#leftarrow').addEventListener('click', () => changePage(currentPage - 1));
+  document.querySelector('#rightarrow').addEventListener('click', () => changePage(currentPage + 1));
 
   // project slideshow
   const slides = document.querySelectorAll('.slide');
   const slidemenu = document.querySelector('#slideshowmenu');
 
   const projects = ["Musichar", "Personal Site", "Study Aboard Matching", "Logic2020", "Team Garbage", "GameCentre"];
-  let current_slide = 0;
+  let currentSlide = 0;
 
-  for (let i = 0; i<projects.length; i++){
-    console.log(projects[i])
+  for (let i = 0; i < projects.length; i++){
     let projectlink = document.createElement("li");
     projectlink.innerText = projects[i];
 
     projectlink.addEventListener('click', function(e) {
       // fade current page
-      slides[current_slide].style.opacity = 0;
+      slides[currentSlide].style.opacity = 0;
       setTimeout(function() {
         // remove page from flow
-        slides[current_slide].classList.remove("active");
+        slides[currentSlide].classList.remove("active");
         // set add next page
         slides[i].classList.add("active");
         // fade in
         slides[i].style.opacity = 1;
-        current_slide = i;
+        currentSlide = i;
       }, 500)
     })
     slidemenu.appendChild(projectlink)
@@ -80,35 +102,4 @@ function init(){
       });
   });
 
-  function ChangePage(pagenum){
-    // make old page invisible
-    content[current].style.opacity = 0;
-
-    current = pagenum;
-
-    const left_arrow = document.querySelector('#leftarrow');
-    const right_arrow = document.querySelector('#rightarrow');
-
-    // update visible arrows
-    if (current == 0) {
-      left_arrow.classList.remove("active");
-      right_arrow.classList.add("active");
-    }
-    else if (current == 4) {
-      left_arrow.classList.add("active");
-      right_arrow.classList.remove("active");
-    }
-    else {
-      left_arrow.classList.add("active");
-      right_arrow.classList.add("active");
-    }
-    // scroll to page
-    wrapper.scrollBy({
-      top: pages.eq(current).offset().top,
-      left: pages.eq(current).offset().left,
-      behavior: 'smooth'
-    })
-    // make new page visible
-    content[current].style.opacity = 1;
-  }
 }

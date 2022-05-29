@@ -6,7 +6,6 @@ body {
   user-select: none;
 }
 
-
 ul {
   list-style-type: none;
 }
@@ -17,40 +16,6 @@ p {
 
 .break {
   flex-basis: 100%;
-}
-
-/* fun cursor :) */
-.tail {
-    position: absolute;
-    background-color: white;
-    z-index: 102;
-    pointer-events: none;
-      -webkit-touch-callout: none;
-    user-select: none;
-      -webkit-user-select: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      -o-user-select: none;
-    mix-blend-mode: exclusion;
-    transition-timing-function: ease-out;
-}
-
-#tail1 {
-  top: 95px;
-  left: 85px;
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-}
-
-#tail2 {
-  top: 100px;
-  left: 90px;
-  width: 10px;
-  height: 10px;
-  border-radius: 5px;
-  transition-duration: 200ms;
 }
 
 /* landing page */
