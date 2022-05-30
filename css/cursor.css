@@ -14,7 +14,7 @@
     transition-timing-function: ease-out;
 }
 
-#tail1 {
+#outer {
   top: 95px;
   left: 85px;
   width: 20px;
@@ -22,7 +22,7 @@
   border-radius: 10px;
 }
 
-#tail2 {
+#inner {
   top: 100px;
   left: 90px;
   width: 10px;

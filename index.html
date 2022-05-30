@@ -7,6 +7,7 @@
   <meta name=”viewport” content=”width=device-width, initial-scale=1″>
   <link rel="stylesheet" type="text/css" href="./css/index.css">
   <link rel="stylesheet" type="text/css" href="./css/cursor.css">
+  <link rel="stylesheet" type="text/css" href="./css/landing.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="./assets/favicon.png"/>
@@ -14,16 +15,16 @@
 
 <body>
   <!-- cursor -->
-  <div id="tail1" class="tail fadedIn"></div>
-  <div id="tail2" class="tail fadedIn"></div>
+  <div id="outer" class="tail fadedIn"></div>
+  <div id="inner" class="tail fadedIn"></div>
 
   <div id="icons" class="fadedIn">
     <a href="https://www.linkedin.com/in/leesgrey/"><img src="./assets/linkedin.png"/></a>
     <a href="https://www.github.com/leesgrey"><img src="./assets/github.png"/></a>
     <a href="mailto:greysieun.lee@gmail.com"><img src="./assets/email.png"/></a>
     <!-- arrows -->
-    <svg class="arrows fadedIn active" id="leftarrow" xmlns="http://www.w3.org/2000/svg" width="53" height="70" viewBox="0 0 53 69.9"><style>.a{fill:none;stroke-linecap:round;stroke-width:10;stroke:#fff;}</style><g data-name="Group 1" transform="translate(-1582.523 -419.523)"><line data-name="Line 1" x1="39" y2="28" transform="translate(1589.5 426.5)" class="a"/><line data-name="Line 2" x1="39" y1="28" transform="translate(1589.5 454.46)" class="a"/></g></svg>
-    <svg class="arrows fadedIn active" id="rightarrow" xmlns="http://www.w3.org/2000/svg" width="53" height="70" viewBox="0 0 53 69.9"><style>.a{fill:none;stroke-linecap:round;stroke-width:10;stroke:#fff;}</style><g data-name="Group 1" transform="translate(1635.477 489.398)rotate(180)"><line data-name="Line 1" x1="39" y2="28" transform="translate(1589.5 426.5)" class="a"/><line data-name="Line 2" x1="39" y1="28" transform="translate(1589.5 454.46)" class="a"/></g></svg>
+    <img class="arrows fadedIn active" id="leftarrow" src="./assets/left.svg" />
+    <img class="arrows fadedIn active" id="rightarrow" src="./assets/right.svg" />
   </div>
 
   <div class="outer-wrapper">
@@ -76,12 +77,18 @@
             </ul>
           </div>
         </div>
-        <div id="aboutcontent">
-          <div id="border">
-          <img id="profile" src="./assets/me.jpeg"/>
-            <p class="abtcap">Hello! My name's Grey, and I'm a computer science student at the University of Toronto with an interest in human-computer interaction and game design. <br><br>
-              Since childhood, I've been inspired by animation and games to combine art and technology into new forms of storytelling.<br><br>
-              I believe technology should be fun and human, and I hope to foster experiences that are accessible and enjoyable to everyone!</p>
+        <div class="pagecontent">
+          <div id="aboutcontent">
+            <div id="border">
+              <img id="profile" src="./assets/me.jpeg"/>
+              <p class="abtcap">Hello! My name's Grey, and I'm a computer science student at the University of Toronto with an interest in human-computer interaction and game design. <br><br>
+                Since childhood, I've been inspired by animation and games to combine art and technology into new forms of storytelling.<br><br>
+                I believe technology should be fun and human, and I hope to foster experiences that are accessible and enjoyable to everyone!</p>
+              <p class="abtcap">In my free time I like to draw, , and read horror novels. I'm always looking for new ... playlist of long-time favorites and new obsessions. <br><br>
+                Blah blah...
+              </p>
+              <iframe style="flex: 1 0 30%; border-radius:12px; margin-left: 3rem;" src="https://open.spotify.com/embed/playlist/2uQCk9kjPFJVGR8z9ANAYo?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>
           </div>
         </div>
       </div>
@@ -175,6 +182,9 @@
         </div>
         </div>
         <div id="gallery">
+          <div id="artblurb">
+            <p style="padding: 1rem;">Blah blah blah</p>
+          </div>
           <img src="./assets/rad.png"/>
           <img src="./assets/cyber.png"/>
           <img src="./assets/charms.png"/>

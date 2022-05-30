@@ -47,7 +47,6 @@ function init(){
   document.querySelector("#moon").addEventListener('click', () => {
     // TODO: revisit overlapping scrolls
     wrapper.scrollTo({
-      top: 0,
       left: 0,
       behavior: 'smooth'
     })
@@ -55,8 +54,17 @@ function init(){
   })
 
   // menu buttons
-  Array.from(document.getElementsByClassName('menuLink')).forEach((link, i) => {
-    link.addEventListener('click', () => changePage(i + 1));
+  Array.from(document.getElementsByClassName('about')).forEach((x) => {
+    x.addEventListener('click', function() { changePage(1); });
+  });
+  Array.from(document.getElementsByClassName('projects')).forEach((x) => {
+    x.addEventListener('click', function() { changePage(2); });
+  });
+  Array.from(document.getElementsByClassName('art')).forEach((x) => {
+    x.addEventListener('click', function() { changePage(3); });
+  });
+  Array.from(document.getElementsByClassName('contact')).forEach((x) => {
+    x.addEventListener('click', function() { changePage(4); });
   });
 
   // arrow buttons
@@ -92,14 +100,13 @@ function init(){
 
   // fun cursor :)
   $(document).bind('mousemove', function(e){
-      $('#tail1').css({
+      $('#outer').css({
          left:  e.pageX - 10,
          top:   e.pageY - 10
       });
-      $('#tail2').css({
+      $('#inner').css({
          left:  e.pageX - 5,
          top:   e.pageY - 5
       });
   });
-
-}
+};
