@@ -117,4 +117,12 @@ function init(){
          top:   e.pageY - 5
       });
   });
+
+  window.addEventListener('resize', () => {
+    wrapper.scrollBy({
+      top: pages.eq(currentPage).offset().top,
+      left: pages.eq(currentPage).offset().left,
+      behavior: 'smooth'
+    });
+  });
 };
