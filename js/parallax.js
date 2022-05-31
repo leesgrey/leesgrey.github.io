@@ -6,26 +6,34 @@ function init(){
   const content = document.getElementsByClassName('content');
   const left_arrow = document.querySelector('#leftarrow');
   const right_arrow = document.querySelector('#rightarrow');
+  const header = document.getElementById('pageheader');
   const pages = $(".content");
 
   let currentPage = 0;
 
-  function changePage(newPage){
+  function updateHeader(newPage) {
+  }
+
+  function changePage(newPage) {
     // make old page invisible
     content[currentPage].style.opacity = 0;
 
     // update visible arrows
     if (newPage == 0) {
+      header.style.opacity = 0;
       left_arrow.classList.remove("active");
       right_arrow.classList.add("active");
     }
-    else if (newPage == pages.length - 1) {
-      left_arrow.classList.add("active");
-      right_arrow.classList.remove("active");
-    }
     else {
-      left_arrow.classList.add("active");
-      right_arrow.classList.add("active");
+      header.style.opacity = 1;
+      if (newPage == pages.length - 1) {
+        left_arrow.classList.add("active");
+        right_arrow.classList.remove("active");
+      }
+      else {
+        left_arrow.classList.add("active");
+        right_arrow.classList.add("active");
+      }
     }
 
     // scroll to page
