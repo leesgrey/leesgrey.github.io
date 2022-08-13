@@ -1,6 +1,6 @@
 // fun cursor :)
 export function cursor() {
-  console.log('cursor')
+   console.log('cursor')
   $(document).bind('mousemove', function(e){
       $('#outer').css({
          left:  e.pageX - 10,

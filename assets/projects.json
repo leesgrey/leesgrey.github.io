@@ -1,0 +1,10 @@
+{
+  "projects": [
+    {
+      "name": "playlistats",
+      "description": "idk",
+      "tools": "TypeScript, React",
+      "link": "https://leesgrey.github.io/playlistats/#"
+    }
+  ]
+}
