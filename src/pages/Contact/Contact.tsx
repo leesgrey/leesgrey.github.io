@@ -2,7 +2,7 @@ import React from 'react';
 import github from '../../assets/github.png';
 import linkedin from '../../assets/linkedin.png';
 import email from '../../assets/email.png';
-import resume from '../../assets/resume.png';
+import resumeIcon from '../../assets/resume.png';
 import { Content } from '../shared';
 
 interface ContactProps {
@@ -27,7 +27,7 @@ const Contact = React.forwardRef<HTMLDivElement, ContactProps>(({ visible }, ref
             <p>Email</p>
           </div>
           <div className="pair">
-            <a href="./assets/GreyLee_Resume.pdf" target="_blank"><img src={resume}/></a>
+            <a href={process.env.PUBLIC_URL + '/GreyLee_Resume.pdf'} target="_blank"><img src={resumeIcon}/></a>
             <p>Resume</p>
           </div>
         </div>
