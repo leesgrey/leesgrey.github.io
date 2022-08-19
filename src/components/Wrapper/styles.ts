@@ -89,7 +89,7 @@ export const Header = styled.div`
   box-sizing: border-box;
 `;
 
-export const PageTitle = styled.h1`
+export const PageTitle = styled.h1(({ invis } : { invis: boolean }) =>`
   font-size: 5rem;
   color: #DFF2FA;
   font-family: 'Ubuntu', Sans-Serif;
@@ -98,7 +98,9 @@ export const PageTitle = styled.h1`
   position: absolute;
   bottom: 0;
   margin: 0 10rem;
-`;
+  opacity: ${invis ? '0' : '1'};
+  transition: opacity 0.3s;
+`);
 
 export const PageMenu = styled.ul`
   font-family: 'Ubuntu', sans-serif;

@@ -15,6 +15,8 @@ const MAX_PAGE_NUM = 3;
 
 const Wrapper = () => {
   const [pageNum, setPageNum] = useState(0);
+  const [titleInvis, setTitleInvis] = useState(false);
+  const [pageTitle, setPageTitle] = useState('');
   const landingRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const projectRef = useRef<HTMLDivElement>(null);
@@ -25,9 +27,16 @@ const Wrapper = () => {
   const scrollToPage = (pageNum: number) => {
     pages[pageNum].current?.scrollIntoView({ behavior: 'smooth' });
   }
+
+  const updateTitle = () => {
+    setPageTitle(pageNames[pageNum]);
+    setTitleInvis(false);
+  }
   
   useEffect(() => {
-    scrollToPage(pageNum)
+    setTitleInvis(true);
+    scrollToPage(pageNum);
+    setTimeout(updateTitle, 100);
   }, [pageNum]);
 
   window.addEventListener('resize', () => scrollToPage(pageNum))
@@ -50,7 +59,7 @@ const Wrapper = () => {
       </ArrowContainer>
       <Header>
         <Moon className="fadedIn" onClick={() => setPageNum(0)}></Moon>
-        {!!pageNum && <PageTitle>{pageNames[pageNum]}</PageTitle>}
+        {!!pageNum && <PageTitle invis={titleInvis}>{pageTitle}</PageTitle>}
         <PageMenu className="pagemenu">
           <MenuItem>
             <a onClick={() => setPageNum(1)}>About</a>
