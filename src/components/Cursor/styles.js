@@ -22,6 +22,7 @@ export const OuterTail = styled(Tail)`
   top: 7rem;
   left: 9rem;
   width: 20px;
+  height: 20px;
   transition: width 100ms linear, height 100ms linear, top 150ms, left 150ms;
 `
 export const InnerTail = styled(Tail)`

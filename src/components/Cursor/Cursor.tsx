@@ -1,6 +1,5 @@
 import { Fragment, useEffect, useRef } from 'react';
 import { OuterTail, InnerTail } from './styles';
-import useMousePosition from '../Cursor/useMousePosition';
 
 function Cursor() {
   const innerRef = useRef<HTMLDivElement>(null);
@@ -17,14 +16,14 @@ function Cursor() {
     }
   }
 
-  const mouseDownEvent = (e: MouseEvent) => {
+  const mouseDownEvent = () => {
     if (outerRef.current) {
-      outerRef.current.style.width = '0';
-      outerRef.current.style.height= '0';
+      outerRef.current.style.width = '0px';
+      outerRef.current.style.height= '0px';
     }
   }
 
-  const mouseUpEvent = (e: MouseEvent) => {
+  const mouseUpEvent = () => {
     if (outerRef.current) {
       outerRef.current.style.width = '20px';
       outerRef.current.style.height= '20px';
