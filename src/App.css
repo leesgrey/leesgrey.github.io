@@ -1,38 +1,237 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  background-color: #090a19;
+  font-family: 'Open Sans', sans-serif;
+  user-select: none;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul {
+  list-style-type: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  color: #fff;
+  font-size: 1.15rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.5s color;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+a:visited {
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
+a:hover {
+  color: #F2D9A1;
+}
+
+li {
+  transition: transform 0.5s;
+}
+
+li:hover {
+  transform: scale(1.1);
+}
+
+.content {
+  width: 100%;
+  transition: 2s opacity;
+  padding: 11.5rem 0;
+}
+
+.fades {
+  overflow: hidden;
+  transition: opacity 1s;
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
+}
+
+.fadedIn {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes unfold {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-width: 50vh;
+    opacity: 1;
+  }
+}
+
+.verticalUnfold{
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  animation: unfold 3s forwards;
+}
+
+@keyframes rise {
+  0% {perspective-origin: 90% 75%;}
+  100% {perspective-origin: 100% 65%;}
+}
+
+.outer-wrapper {
+  perspective-origin: 90% 75%;
+  animation: rise 3s forwards;
+  overflow-x: hidden;
+  perspective: 1px;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+#cursor {
+  background-color: white;
+  height: 10px;
+  position: absolute;
+  float: left;
+  top: 100px;
+  width: 10px;
+}
+
+#caption {
+  font-family: 'Ubuntu', sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  left: 20px;
+  animation-delay: 1.5s;
+}
+
+#icons img {
+  width: 3vw;
+  min-width: 32px;
+  height: auto;
+}
+
+#slideshow {
+  margin: 10px 100px;
+  text-align: left;
+  padding-top: 20px;
+}
+
+hr {
+  width: 500px;
+  text-align: left;
+}
+.abtcap {
+  vertical-align: top;
+  display: inline-block;
+  color: #fff;
+  flex: 1 0 60%;
+}
+
+#profile {
+  position: relative;
+  display: inline-block;
+  top: -3rem;
+  left: -3rem;
+  width: 12.5rem;
+  margin: 0;
+  border-radius: 0 3rem 0;
+  flex: 1 0 30%;
+}
+
+#fun {
+  flex-basis: 50%;
+}
+
+.landing {
+  color: #C3DFEB;
+}
+
+#background {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  right: 0;
+}
+
+.active {
+  display: inline;
+  cursor: pointer;
+}
+
+.arrows img {
+  position: absolute;
+}
+
+#gallery img {
+  height: 55vh;
+  position: relative;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  outline: 0px solid #fff;
+  outline-offset: 0px;
+  margin-bottom: 100px;
+  transition: outline-offset 0.5s;
+}
+
+#gallery img:hover {
+    outline: 1px solid #fff;
+    outline-offset: -10px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+    height: 0;
+    width: 0px;
+    background: transparent;
+}
+
+.pagecontent {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.links {
+  margin-top: 10%;
+  flex-basis: 100%;
+  display: inline-block;
+}
+
+.pair {
+  margin: 0 50px;
+  display: inline-block;
+}
+
+.pair img {
+  height: 5em;
+  transition: transform 0.5s;
+}
+
+.pair img:hover {
+  transform: scale(1.1);
+}
+
+#cutecontainer{
+  flex-basis: 100%;
+}
+
+#cute {
+  display: inline-block;
+  border-top: 1px solid #fff;
+  padding-top: 25px;
+  width: 50%;
+  font-size: 20px;
 }
