@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 const Tail = styled.div`
-  position: absolute;
-  background-color: white;
-  z-index: 102;
   pointer-events: none;
     -webkit-touch-callout: none;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 102;
   user-select: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -14,23 +16,17 @@ const Tail = styled.div`
     -o-user-select: none;
   mix-blend-mode: exclusion;
   transition-timing-function: ease-out;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 `
 
 export const OuterTail = styled(Tail)`
-  top: 95px;
-  left: 85px;
+  top: 7rem;
+  left: 9rem;
   width: 20px;
-  height: 20px;
-  border-radius: 10px;
+  transition: width 100ms linear, height 100ms linear, top 150ms, left 150ms;
 `
-
 export const InnerTail = styled(Tail)`
-  top: 100px;
-  left: 90px;
+  top: 7rem;
+  left: 9rem;
   width: 10px;
   height: 10px;
-  border-radius: 5px;
-`
+`;
