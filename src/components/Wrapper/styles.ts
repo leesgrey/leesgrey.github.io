@@ -19,13 +19,13 @@ const Arrow = styled.img(({ active } : { active?: boolean }) => `
   animation-delay: 1s;
   mix-blend-mode: exclusion;
   opacity: 1;
-  ${!active && 'opacity: 0 !important;'}
+  ${!active && 'opacity: 0;'}
   transition: opacity 1s;
 `);
 
 export const LeftArrow = styled(Arrow)`
   left: 4rem;
-  transition: filter 0.25s ease-out, left 0.25s ease-out, opacity 1s ease-out;
+  transition: filter 0.25s ease-out, left 0.25s ease-out, opacity 0.25s ease-out;
 
   &:hover {
     filter: drop-shadow(10px 0px 0px rgba(255, 255, 255, 0.3)) drop-shadow(10px 0px 0px rgba(255, 255, 255, 0.3));
@@ -36,7 +36,7 @@ export const LeftArrow = styled(Arrow)`
 
 export const RightArrow = styled(Arrow)`
   right: 4rem;
-  transition: filter 0.25s ease-out, right 0.25s ease-out;
+  transition: filter 0.25s ease-out, left 0.25s ease-out, opacity 0.25s ease-out;
 
   &:hover {
     filter: drop-shadow(-10px 0px 0px rgba(255, 255, 255, 0.3)) drop-shadow(-10px 0px 0px rgba(255, 255, 255, 0.3));
