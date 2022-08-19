@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { cssFadeIn } from '../../styles';
 
 export const LeftHalf = styled.div`
   height: 100%;
@@ -25,9 +26,13 @@ export const Name = styled.h1`
   text-transform: uppercase;
   font-size: 3.5rem;
   margin: 0;
+  opacity: 0;
+  animation: ${cssFadeIn};
 `;
  
 export const Tagline = styled.p`
+  opacity: 0;
+  animation: ${cssFadeIn};
   animation-delay: 0.5s;
   z-index: 9;
   margin: 0.75rem 0;
@@ -39,6 +44,8 @@ export const RightHalf = styled.div`
   box-sizing: border-box;
   display: flex;
   align-items: center;
+  opacity: 0;
+  animation: ${cssFadeIn};
   animation-delay: 1s;
 `;
 

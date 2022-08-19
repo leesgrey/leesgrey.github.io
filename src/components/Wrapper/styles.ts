@@ -1,10 +1,13 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { cssFadeIn } from '../../styles';
 
 export const ArrowContainer = styled.div`
   position: fixed;
   z-index: 5;
   bottom : 15px;
   right: 25px;
+  opacity: 0;
+  animation: ${cssFadeIn};
   animation-delay: 1s;
 `;
 
@@ -53,6 +56,8 @@ export const Moon = styled.div`
   left: 4rem;
   mix-blend-mode: exclusion;
   z-index: 100;
+  opacity: 0;
+  animation: ${cssFadeIn};
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
   &:hover {
     transform: scale(1.1);
@@ -60,12 +65,14 @@ export const Moon = styled.div`
   }
 `;
 
-export const Mountain = styled.img(({ left } :  { left: number }) => `
+export const Mountain = styled.img(({ left } :  { left: number }) => css`
   position: fixed;
   left: calc(-10rem - ${left}rem);
   height: 80vh;
   bottom: -2rem;
   transition: left 0.5s;
+  opacity: 0;
+  animation: ${cssFadeIn};
   animation-delay: 1s;
   pointer-events: none;
 `);
@@ -110,6 +117,9 @@ export const PageMenu = styled.ul`
   position: absolute;
   bottom: 0;
   right: 10rem;
+  opacity: 0;
+  animation: ${cssFadeIn};
+  animation-delay: 1s;
 `
 
 export const MenuItem = styled.li`
