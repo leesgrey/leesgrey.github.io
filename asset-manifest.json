@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cb0fb7b4.css",
+    "main.js": "/static/js/main.e4d32fae.js",
+    "static/js/787.37e93976.chunk.js": "/static/js/787.37e93976.chunk.js",
+    "static/media/me.jpeg": "/static/media/me.830126352bead24a1a91.jpeg",
+    "static/media/playlistats.png": "/static/media/playlistats.ce0224637057349468b9.png",
+    "static/media/gc.png": "/static/media/gc.58930626faa49724aa5a.png",
+    "static/media/site.png": "/static/media/site.8b3eb95c2034a52e0a6a.png",
+    "static/media/sam.png": "/static/media/sam.05d8933d2478a8232683.png",
+    "static/media/admin.png": "/static/media/admin.bd91972049410f02bda3.png",
+    "static/media/shamebot.png": "/static/media/shamebot.7ba895f6f411688380b7.png",
+    "static/media/github.png": "/static/media/github.8682e7d395f52e3b6666.png",
+    "static/media/front_mountains.svg": "/static/media/front_mountains.8745c5fcb24a2902efc9cfb4850e9c4a.svg",
+    "static/media/back_mountains.svg": "/static/media/back_mountains.f68f136d7c6de7901db5d593055dfa27.svg",
+    "static/media/mid_mountains.svg": "/static/media/mid_mountains.60737eaac3ccf8913c212a79c5e22310.svg",
+    "index.html": "/index.html",
+    "static/media/left.svg": "/static/media/left.606519d3ac6e3eebef2ef28370ad8030.svg",
+    "static/media/right.svg": "/static/media/right.947d71d636e5cfa0f2078cd5009fbf92.svg",
+    "main.cb0fb7b4.css.map": "/static/css/main.cb0fb7b4.css.map",
+    "main.e4d32fae.js.map": "/static/js/main.e4d32fae.js.map",
+    "787.37e93976.chunk.js.map": "/static/js/787.37e93976.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cb0fb7b4.css",
+    "static/js/main.e4d32fae.js"
+  ]
+}
