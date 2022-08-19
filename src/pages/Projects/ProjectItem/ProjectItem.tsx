@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProjectWrapper, ProjectName, ProjectImage, LinkText, Tools, ProjectLink, InfoBar, Links, LinkIcon } from './styles';
+import { ProjectWrapper, ProjectName, ProjectImage, IconText, LinkText, Tools, ProjectLink, InfoBar, Links, LinkIcon } from './styles';
 import github from '../../../assets/github.png';
 import globe from '../../../assets/globe.png';
 import tool from '../../../assets/tool.png';
@@ -30,7 +30,7 @@ const ProjectItem = ({ project } : { project: Project }) => {
       <InfoBar>
         <Tools>
           <LinkIcon src={tool} />
-          <LinkText>{getToolString(project.tools)}</LinkText>
+          <IconText>{getToolString(project.tools)}</IconText>
         </Tools>
         <Links>
           {project.link && <li>

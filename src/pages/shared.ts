@@ -23,3 +23,10 @@ export const TranslucentBordered = styled.div`
   align-content: flex-start;
   max-width: 100%;
 `
+
+export const Content = styled.div(({ visible } : { visible: boolean }) => `
+  opacity: ${visible ? '1' : '0'};
+  width: 100%;
+  transition: 0.75s opacity;
+  padding: 11.5rem 0;
+`);

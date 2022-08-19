@@ -1,11 +1,15 @@
 import React from 'react';
 import me from '../../assets/me.jpeg';
-import { ScrollPage, TranslucentBordered } from 'pages/shared';
+import { ScrollPage, TranslucentBordered, Content } from 'pages/shared';
 import { PlaylistContainer } from './styles';
 
-const About = React.forwardRef<HTMLDivElement>((props, ref) => {
+interface AboutProps {
+  visible: boolean;
+}
+
+const About = React.forwardRef<HTMLDivElement, AboutProps>(({ visible }, ref) => {
   return (
-    <div id="about" ref={ref} className="content fades">
+    <Content visible={visible} ref={ref} className="content fades">
       <div className="pagecontent">
         <ScrollPage>
           <TranslucentBordered>
@@ -22,7 +26,7 @@ const About = React.forwardRef<HTMLDivElement>((props, ref) => {
           </TranslucentBordered>
         </ScrollPage>
       </div>
-    </div>
+    </Content>
   )
 });
 

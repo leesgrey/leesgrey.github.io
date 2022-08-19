@@ -2,10 +2,15 @@ import React from 'react';
 import { ScrollPage, TranslucentBordered } from '../shared';
 import ProjectItem from './ProjectItem/ProjectItem';
 import projects from './projectList';
+import { Content } from '../shared';
 
-const Projects = React.forwardRef<HTMLDivElement>((props, ref) => {
+interface ProjectsProps {
+  visible: boolean;
+}
+
+const Projects = React.forwardRef<HTMLDivElement, ProjectsProps>(({ visible }, ref) => {
   return (
-    <div id="projects" ref={ref} className="content fades">
+    <Content visible={visible} ref={ref} className="fades">
       <div className="pagecontent">
         <ScrollPage>
           <TranslucentBordered>
@@ -15,7 +20,7 @@ const Projects = React.forwardRef<HTMLDivElement>((props, ref) => {
           </TranslucentBordered>
         </ScrollPage>
       </div>
-    </div>
+    </Content>
   )
 });
 

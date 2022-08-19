@@ -27,7 +27,6 @@ a {
   color: #fff;
   text-decoration: none;
   transition: 0.5s color;
-  cursor: pointer;
 }
 
 a:visited {
@@ -44,12 +43,6 @@ li {
 
 li:hover {
   transform: scale(1.1);
-}
-
-.content {
-  width: 100%;
-  transition: 2s opacity;
-  padding: 11.5rem 0;
 }
 
 .fades {
@@ -171,11 +164,6 @@ hr {
 
 .active {
   display: inline;
-  cursor: pointer;
-}
-
-.arrows img {
-  position: absolute;
 }
 
 #gallery img {

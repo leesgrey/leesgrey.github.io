@@ -53,23 +53,23 @@ const Wrapper = () => {
         {!!pageNum && <PageTitle>{pageNames[pageNum]}</PageTitle>}
         <PageMenu className="pagemenu">
           <MenuItem>
-            <a className="menuLink" onClick={() => setPageNum(1)}>About</a>
+            <a onClick={() => setPageNum(1)}>About</a>
           </MenuItem>
           <MenuItem>
-            <a className="menuLink" onClick={() => setPageNum(2)}>Projects</a>
+            <a onClick={() => setPageNum(2)}>Projects</a>
           </MenuItem>
           <MenuItem>
-            <a className="menuLink" onClick={() => setPageNum(3)}>Contact</a>
+            <a onClick={() => setPageNum(3)}>Contact</a>
           </MenuItem>
         </PageMenu>
       </Header>
 
       <div className="outer-wrapper">
         <ScrollWrapper>
-          <Landing ref={landingRef} setPageNum={setPageNum} />
-          <About ref={aboutRef} />
-          <Projects ref={projectRef} />
-          <Contact ref={contactRef} />
+          <Landing ref={landingRef} visible={pageNum == 0} setPageNum={setPageNum} />
+          <About ref={aboutRef} visible={pageNum == 1}/>
+          <Projects ref={projectRef} visible={pageNum == 2}/>
+          <Contact ref={contactRef} visible={pageNum == 3}/>
         </ScrollWrapper>
       </div>
 

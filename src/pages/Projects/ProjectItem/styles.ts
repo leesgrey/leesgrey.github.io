@@ -58,7 +58,12 @@ export const Tools = styled.div`
   display: flex;
 `;
 
-export const LinkText = styled.p`
+export const IconText = styled.p`
   display: inline;
   vertical-align: middle;
+`
+
+export const LinkText = styled(IconText)`
+  font-family: 'Ubuntu', Sans-Serif;
+  text-transform: uppercase;
 `

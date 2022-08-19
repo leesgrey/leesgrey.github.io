@@ -16,7 +16,8 @@ const Arrow = styled.img(({ active } : { active?: boolean }) => `
   animation-delay: 1s;
   mix-blend-mode: exclusion;
   opacity: 1;
-  ${active ? 'cursor: pointer;' : 'opacity: 0 !important;'}
+  ${!active && 'opacity: 0 !important;'}
+  transition: opacity 1s;
 `);
 
 export const LeftArrow = styled(Arrow)`
@@ -42,7 +43,6 @@ export const RightArrow = styled(Arrow)`
 `;
 
 export const Moon = styled.div`
-  cursor: pointer;
   text-align: center;
   width: 10rem;
   height: 10rem;
@@ -113,4 +113,5 @@ export const PageMenu = styled.ul`
 export const MenuItem = styled.li`
   display: inline-block;
   margin: 0 20px;
+  font-size: 1.25rem;
 `;

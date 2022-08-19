@@ -1,14 +1,15 @@
 import React from 'react';
 import { LeftHalf, LeftContent, Name, Tagline, RightHalf, Menu, MenuItem } from './styles';
+import { Content } from '../shared';
 
 interface LandingProps {
   setPageNum: Function;
+  visible: boolean;
 }
 
-const Landing = React.forwardRef<HTMLDivElement, LandingProps>((props, ref) => {
-  const { setPageNum } = props;
+const Landing = React.forwardRef<HTMLDivElement, LandingProps>(({ setPageNum, visible }, ref) => {
   return (
-    <div ref={ref} id="start" className="landing content">
+    <Content visible={visible} ref={ref} className="landing">
       <LeftHalf>
         <LeftContent>
           <Name className="fadedIn">Grey Lee</Name>
@@ -28,7 +29,7 @@ const Landing = React.forwardRef<HTMLDivElement, LandingProps>((props, ref) => {
           </MenuItem>
         </Menu>
       </RightHalf>
-    </div>
+    </Content>
   );
 });
 

@@ -3,10 +3,15 @@ import github from '../../assets/github.png';
 import linkedin from '../../assets/linkedin.png';
 import email from '../../assets/email.png';
 import resume from '../../assets/resume.png';
+import { Content } from '../shared';
 
-const Contact = React.forwardRef<HTMLDivElement>((props, ref) => {
+interface ContactProps {
+  visible: boolean;
+}
+
+const Contact = React.forwardRef<HTMLDivElement, ContactProps>(({ visible }, ref) => {
   return (
-    <div id="contact" ref={ref} className="content fades">
+    <Content visible={visible} ref={ref} className="fades">
       <div className="pagecontent">
         <div className="links">
           <div className="pair">
@@ -30,7 +35,7 @@ const Contact = React.forwardRef<HTMLDivElement>((props, ref) => {
           <p id="cute">Let's make something together!</p>
         </div>
       </div>
-    </div>
+    </Content>
   );
 })
 
