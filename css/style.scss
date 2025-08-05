@@ -1,0 +1,50 @@
+@use "var/consts" as *;
+
+@use "var/colors";
+@use "var/sizes";
+
+@use "landing";
+@use "about";
+
+:root {
+    font-family: Inter, sans-serif;
+}
+
+body {
+    background-color: colors.$paper;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+#bg-gradient {
+    width: calc(100vw - ($padding * 2));
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-image: linear-gradient(colors.$green, colors.$paper);
+    margin-top: $padding;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.deco {
+    letter-spacing: 20%;
+}
+
+.text {
+    line-height: 150%;
+    font-size: sizes.$m;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}

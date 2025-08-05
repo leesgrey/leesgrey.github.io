@@ -1,0 +1,25 @@
+@use "var/colors";
+@use "var/sizes";
+
+#about {
+    position: relative;
+    top: -3.5rem;
+
+    .box {
+        width: 33.125rem;
+        border: 0.0625rem solid black;
+        background-color: colors.$paper;
+        
+        .header {
+            background-color: black;
+            color: colors.$paper;
+            font-size: sizes.$m;
+            text-align: right;
+            padding: 0.5rem;
+        }
+
+        .content {
+            padding: 1rem 2rem;
+        }
+    }
+}
