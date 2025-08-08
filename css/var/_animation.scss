@@ -1,0 +1,101 @@
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes namepanel-line-expand {
+  from { width: 0rem; }
+  to { width: 37.8rem; }
+}
+
+@keyframes namepanel-corner-expand {
+    from { height: 0; }
+    to { height: 8.75rem; }
+}
+
+@keyframes bruh {
+    from { width: 1rem; }
+    to { width: 20rem; }
+}
+
+@keyframes bruh2 {
+    from { top: 2rem; left: 0rem; }
+    to { top: 4rem; left: 0.75rem; }
+}
+
+.namepanel-line-expand {
+    width: 0;
+
+    animation-name: namepanel-line-expand;
+    animation-duration:  1s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.shortdelay-fadein {
+    animation: 0.5s ease-in 0.1s;
+}
+
+.screen {
+  opacity: 0;
+
+  animation-name: fade-in;
+  animation-duration: 0.1s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+}
+
+.circles-anim {
+  opacity: 0;
+
+  animation-name: fade-in;
+  animation-duration: 0s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.greeting-anim {
+  opacity: 0;
+
+  animation-name: fade-in;
+  animation-duration: 0.1s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.corner-anim {
+    height: 0;
+    width: 1rem;
+
+    animation-name: namepanel-corner-expand, bruh;
+    animation-duration: 0.7s, 0.5s;
+    animation-delay: 0.2s, 0.5s;
+    animation-fill-mode: forwards, forwards;
+}
+
+.name-anim {
+    opacity: 0;
+
+    animation-name: fade-in;
+    animation-duration: 0.3s;
+    animation-delay: 0.45s;
+    animation-fill-mode: forwards;
+}
+
+.outline-anim {
+    opacity: 0;
+
+    animation-name: fade-in, bruh2;
+    animation-duration: 0.1s, 0.7s;
+    animation-delay: 0.7s, 0.2s;
+    animation-fill-mode: forwards, forwards;
+}
+
+.subtitle-anim {
+    opacity: 0;
+
+    animation-name: fade-in;
+    animation-duration: 0.3s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+}

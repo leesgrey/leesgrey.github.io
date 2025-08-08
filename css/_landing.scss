@@ -30,11 +30,37 @@
         $content-margin: 4.4375rem;
         
         #panel-top {
-            background: url(../panel_top.svg) no-repeat;
             height: 3.1875rem;
 
+            .stem {
+                width: 1rem;
+                height: 100%;
+                background: url('../assets/panel_top_stem.svg') no-repeat;
+                display: inline-block;
+            }
+
+            .line {
+                height: 100%;
+                background: url('../assets/panel_top_line.svg') no-repeat;
+                display: inline-block;
+                position: relative;
+                top: 0.35rem;
+                margin-left: 0.5rem;
+            }
+
+            .circles {
+                position: absolute;
+                height: 100%;
+                background: url('../assets/panel_top_circles.svg') no-repeat;
+                width: 3.25rem;
+                top: 0;
+                right: 0;
+            }
+
             #greeting {
-                margin-left: $content-margin;
+                position: absolute;
+                left: $content-margin;
+                top: -0.25rem;
             }
         }
 
@@ -47,8 +73,6 @@
         #name-outline {
             @extend #name;
             position: absolute;
-            top: 4rem;
-            left: 0.75rem;
             color: transparent;
             z-index: -1;
 
@@ -59,10 +83,23 @@
             margin-top: -4.5rem;
 
             #bottomleft-corner {
-                background: url(../panel_bottomleft.svg) no-repeat;
+                position: relative;
+                display: inline-block;
                 width: 20rem;
                 height: 8.75rem;
-                display: inline-block;
+
+                .base {
+                    background: url('../assets/corner_base.svg') no-repeat;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .line {
+                    background: url('../assets/corner_line.svg') no-repeat;
+                    position: absolute;
+                    left: 0.25rem;
+                    top: 0.25rem;
+                }
             }
 
             #subtitle-container {
@@ -76,7 +113,7 @@
 
     #landing-grid {
         position: absolute;
-        background: url(../grid.svg) no-repeat;
+        background: url(../assets/grid.svg) no-repeat;
         width: 22.0625rem;
         height: 11.8125rem;
         top: 22rem;
@@ -92,7 +129,7 @@
 
         #welcome-stem {
             position: relative;
-            background: url(../welcome_stem.svg) no-repeat;
+            background: url(../assets/welcome_stem.svg) no-repeat;
             height: 2.375rem;
             top: -1px;
             left: 12rem;
@@ -101,7 +138,7 @@
 
     .sidedeco {
         position: absolute;
-        background: url(../landing_sidedeco.svg) no-repeat;
+        background: url(../assets/landing_sidedeco.svg) no-repeat;
         width: 85px;
         height: 322px;
         left: -5rem;
@@ -116,7 +153,7 @@
     }
 
     #landing-menu {
-        background: url("../menu_stem.svg") no-repeat;
+        background: url("../assets/menu_stem.svg") no-repeat;
         float: right;
         position: relative;
         top: -3.5rem;
