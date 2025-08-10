@@ -1,59 +1,45 @@
+/*
 @keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
+
 @keyframes namepanel-line-expand {
-  from {
-    width: 0rem;
-  }
-  to {
-    width: 37.8rem;
-  }
+  from { width: 0rem; }
+  to { width: 37.8rem; }
 }
+
 @keyframes namepanel-corner-expand {
-  from {
-    height: 0;
-  }
-  to {
-    height: 8.75rem;
-  }
+    from { height: 0; }
+    to { height: 8.75rem; }
 }
+
 @keyframes bruh {
-  from {
-    width: 1rem;
-  }
-  to {
-    width: 20rem;
-  }
+    from { width: 1rem; }
+    to { width: 20rem; }
 }
+
 @keyframes bruh2 {
-  from {
-    top: 2rem;
-    left: 0rem;
-  }
-  to {
-    top: 4rem;
-    left: 0.75rem;
-  }
+    from { top: 2rem; left: 0rem; }
+    to { top: 4rem; left: 0.75rem; }
 }
+
 .namepanel-line-expand {
-  width: 0;
-  animation-name: namepanel-line-expand;
-  animation-duration: 1s;
-  animation-delay: 0.2s;
-  animation-fill-mode: forwards;
+    width: 0;
+
+    animation-name: namepanel-line-expand;
+    animation-duration:  1s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
 }
 
 .shortdelay-fadein {
-  animation: 0.5s ease-in 0.1s;
+    animation: 0.5s ease-in 0.1s;
 }
 
 .screen {
   opacity: 0;
+
   animation-name: fade-in;
   animation-duration: 0.1s;
   animation-delay: 0.1s;
@@ -62,6 +48,7 @@
 
 .circles-anim {
   opacity: 0;
+
   animation-name: fade-in;
   animation-duration: 0s;
   animation-delay: 1s;
@@ -70,6 +57,7 @@
 
 .greeting-anim {
   opacity: 0;
+
   animation-name: fade-in;
   animation-duration: 0.1s;
   animation-delay: 0.3s;
@@ -77,50 +65,51 @@
 }
 
 .corner-anim {
-  height: 0;
-  width: 1rem;
-  animation-name: namepanel-corner-expand, bruh;
-  animation-duration: 0.7s, 0.5s;
-  animation-delay: 0.2s, 0.5s;
-  animation-fill-mode: forwards, forwards;
+    height: 0;
+    width: 1rem;
+
+    animation-name: namepanel-corner-expand, bruh;
+    animation-duration: 0.7s, 0.5s;
+    animation-delay: 0.2s, 0.5s;
+    animation-fill-mode: forwards, forwards;
 }
 
 .name-anim {
-  opacity: 0;
-  animation-name: fade-in;
-  animation-duration: 0.3s;
-  animation-delay: 0.45s;
-  animation-fill-mode: forwards;
+    opacity: 0;
+
+    animation-name: fade-in;
+    animation-duration: 0.3s;
+    animation-delay: 0.45s;
+    animation-fill-mode: forwards;
 }
 
 .outline-anim {
-  opacity: 0;
-  animation-name: fade-in, bruh2;
-  animation-duration: 0.1s, 0.7s;
-  animation-delay: 0.7s, 0.2s;
-  animation-fill-mode: forwards, forwards;
+    opacity: 0;
+
+    animation-name: fade-in, bruh2;
+    animation-duration: 0.1s, 0.7s;
+    animation-delay: 0.7s, 0.2s;
+    animation-fill-mode: forwards, forwards;
 }
 
 .subtitle-anim {
-  opacity: 0;
-  animation-name: fade-in;
-  animation-duration: 0.3s;
-  animation-delay: 0.8s;
-  animation-fill-mode: forwards;
-}
+    opacity: 0;
 
-@font-face {
-  font-family: "Alphatron";
-  src: url("../Alphatron.otf");
+    animation-name: fade-in;
+    animation-duration: 0.3s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
 }
+*/
 #landing {
-  margin: 7rem auto 0;
+  margin: 13.625rem auto 0;
   position: relative;
 }
 #landing .capsule {
   background-color: black;
   display: inline-flex;
   padding: 0 1.5rem;
+  border: 1px solid #fff;
   border-radius: 0.75rem;
   height: 1.5rem;
   align-items: center;
@@ -128,75 +117,117 @@
   color: #f5f1ea;
 }
 #landing #name-panel {
-  width: 48.0625rem;
   position: relative;
 }
 #landing #name-panel #panel-top {
-  height: 3.1875rem;
+  height: 3.5825rem;
 }
 #landing #name-panel #panel-top .stem {
   width: 1rem;
-  height: 100%;
+  height: calc(100% - 0.25rem);
   background: url("../assets/panel_top_stem.svg") no-repeat;
   display: inline-block;
 }
 #landing #name-panel #panel-top .line {
-  height: 100%;
   background: url("../assets/panel_top_line.svg") no-repeat;
   display: inline-block;
+  width: 38.0625rem;
   position: relative;
-  top: 0.35rem;
-  margin-left: 0.5rem;
+  height: calc(100% - 0.625rem);
+  height: 1.28125;
 }
 #landing #name-panel #panel-top .circles {
-  position: absolute;
-  height: 100%;
+  display: inline-block;
   background: url("../assets/panel_top_circles.svg") no-repeat;
-  width: 3.25rem;
-  top: 0;
-  right: 0;
+  width: 3.415rem;
+  height: calc(100% - 0.1875rem);
+  position: relative;
 }
 #landing #name-panel #panel-top #greeting {
   position: absolute;
   left: 4.4375rem;
-  top: -0.25rem;
 }
-#landing #name-panel #name, #landing #name-panel #name-outline {
-  font-size: 6.25rem;
-  margin: 0 4.4375rem;
-  font-family: "Alphatron";
-}
-#landing #name-panel #name-outline {
+#landing #name-panel #panel-top .moon {
   position: absolute;
-  color: transparent;
-  z-index: -1;
-  -webkit-text-stroke: 1px #f5f1ea;
+  background: url("../assets/halfmoon.svg") no-repeat;
+  width: 7.5625rem;
+  height: 7.5625rem;
+  top: -3.25rem;
+  left: 17rem;
+}
+#landing #name-panel #panel-content {
+  margin: 0 4.4375rem;
+}
+#landing #name-panel #panel-content .arrow {
+  height: 1px;
+  border: 0;
+  border-top: 1px dashed #fff;
+  stroke-width: 1rem;
+}
+#landing #name-panel #panel-content #name-top {
+  display: flex;
+  align-items: center;
+  margin-top: -0.75rem;
+}
+#landing #name-panel #panel-content #name-top #name {
+  font-size: 4rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: Inter, sans-serif;
+  text-transform: lowercase;
+  color: #fff;
+  letter-spacing: 20%;
+  font-weight: 600;
+}
+#landing #name-panel #panel-content #name-top .left {
+  width: 6.25rem;
+  margin: 0 0 0 2rem;
+}
+#landing #name-panel #panel-content #name-bottom {
+  display: flex;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+#landing #name-panel #panel-content #name-bottom .right {
+  width: 7.125rem;
+  margin: 0 3.21875rem 0 0;
+}
+#landing #name-panel #panel-content #name-bottom #name-kr {
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  color: white;
+  letter-spacing: 400%;
 }
 #landing #name-panel #panel-bottom {
-  margin-top: -4.5rem;
+  margin-top: -4rem;
 }
 #landing #name-panel #panel-bottom #bottomleft-corner {
   position: relative;
   display: inline-block;
-  width: 20rem;
+  width: 20.375rem;
   height: 8.75rem;
 }
 #landing #name-panel #panel-bottom #bottomleft-corner .base {
-  background: url("../assets/corner_base.svg") no-repeat;
+  background: url("../assets/panel_bottomleft.svg") no-repeat;
   width: 100%;
   height: 100%;
 }
 #landing #name-panel #panel-bottom #bottomleft-corner .line {
-  background: url("../assets/corner_line.svg") no-repeat;
+  background: url("../assets/panel_bottomleft_line.svg") no-repeat;
   position: absolute;
   left: 0.25rem;
   top: 0.25rem;
+  width: 100%;
+  height: 100%;
 }
 #landing #name-panel #panel-bottom #subtitle-container {
   display: inline-block;
   position: relative;
   font-size: 0.75rem;
-  top: -1.25rem;
+  top: -1.35rem;
+  color: #fff;
+  margin-left: 1.5rem;
 }
 #landing #landing-grid {
   position: absolute;
@@ -285,13 +316,13 @@ p {
   margin: 0;
 }
 
-#bg-gradient {
-  width: calc(100vw - 4rem);
+#background {
+  width: calc(100vw - 1.6rem);
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
-  background-image: linear-gradient(#C5C695, #f5f1ea);
-  margin-top: 2rem;
+  background-color: #000;
+  margin-top: 0.8rem;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -20,12 +20,12 @@ p {
     margin: 0;
 }
 
-#bg-gradient {
+#background {
     width: calc(100vw - ($padding * 2));
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
-    background-image: linear-gradient(colors.$green, colors.$paper);
+    background-color: colors.$background;
     margin-top: $padding;
     display: flex;
     flex-direction: column;
