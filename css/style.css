@@ -103,6 +103,7 @@
 */
 #landing {
   margin: 13.625rem auto 0;
+  width: 100%;
   position: relative;
 }
 #landing .capsule {
@@ -118,42 +119,53 @@
 }
 #landing #name-panel {
   position: relative;
+  width: min(600px, 100% - 3rem);
+  margin: 0 auto;
 }
 #landing #name-panel #panel-top {
   height: 3.5825rem;
+  display: flex;
+  gap: 5%;
 }
 #landing #name-panel #panel-top .stem {
-  width: 1rem;
+  margin-top: 0.4rem;
+  width: 0.795625rem;
   height: calc(100% - 0.25rem);
   background: url("../assets/panel_top_stem.svg") no-repeat;
-  display: inline-block;
+  background-size: contain;
+  flex-shrink: 0;
 }
 #landing #name-panel #panel-top .line {
+  margin-top: 0.4rem;
   background: url("../assets/panel_top_line.svg") no-repeat;
+  background-position: 0 5px;
   display: inline-block;
-  width: 38.0625rem;
+  background-size: contain;
   position: relative;
+  flex-grow: 1;
   height: calc(100% - 0.625rem);
-  height: 1.28125;
 }
 #landing #name-panel #panel-top .circles {
   display: inline-block;
   background: url("../assets/panel_top_circles.svg") no-repeat;
-  width: 3.415rem;
-  height: calc(100% - 0.1875rem);
+  background-size: contain;
   position: relative;
+  width: 9%;
 }
 #landing #name-panel #panel-top #greeting {
   position: absolute;
-  left: 4.4375rem;
+  left: min(4.4375rem, 10%);
+  z-index: 1;
 }
 #landing #name-panel #panel-top .moon {
   position: absolute;
   background: url("../assets/halfmoon.svg") no-repeat;
-  width: 7.5625rem;
-  height: 7.5625rem;
-  top: -3.25rem;
-  left: 17rem;
+  background-size: contain;
+  background-position: bottom;
+  width: min(8rem, 16%);
+  height: 3.78rem;
+  top: -3rem;
+  left: 42%;
 }
 #landing #name-panel #panel-content {
   margin: 0 4.4375rem;
@@ -163,6 +175,7 @@
   border: 0;
   border-top: 1px dashed #fff;
   stroke-width: 1rem;
+  flex-shrink: 1;
 }
 #landing #name-panel #panel-content #name-top {
   display: flex;
@@ -170,7 +183,7 @@
   margin-top: -0.75rem;
 }
 #landing #name-panel #panel-content #name-top #name {
-  font-size: 4rem;
+  font-size: min(4rem, 10vw);
   width: -moz-fit-content;
   width: fit-content;
   font-family: Inter, sans-serif;
@@ -178,6 +191,7 @@
   color: #fff;
   letter-spacing: 20%;
   font-weight: 600;
+  text-wrap: nowrap;
 }
 #landing #name-panel #panel-content #name-top .left {
   width: 6.25rem;
@@ -194,10 +208,11 @@
 }
 #landing #name-panel #panel-content #name-bottom #name-kr {
   font-family: Inter, sans-serif;
-  font-size: 24px;
+  font-size: min(1.5rem, 4vw);
   font-weight: 900;
   color: white;
   letter-spacing: 400%;
+  text-wrap: nowrap;
 }
 #landing #name-panel #panel-bottom {
   margin-top: -4rem;
@@ -353,14 +368,74 @@
 body {
   background-color: #f5f1ea;
   margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
 }
 
 p {
   margin: 0;
 }
 
+#popup {
+  width: 33.125rem;
+  height: 10rem;
+  position: fixed;
+  z-index: 10;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  bottom: 5rem;
+  left: 5rem;
+  opacity: 0;
+  animation: appear 0.1s linear 0.5s;
+  animation-fill-mode: forwards;
+  border: 1px solid black;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#popup .header {
+  background-color: black;
+  border: 0.25rem solid white;
+  color: white;
+  display: flex;
+  font-size: 12px;
+  padding: 0.25rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+#popup .header hr {
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #fff;
+  stroke-width: 1rem;
+  flex-grow: 1;
+  margin-left: 1rem;
+}
+#popup .body {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+#popup .body .icon {
+  width: 4.75rem;
+  height: 4.75rem;
+  margin: 0 2.5rem;
+  background: url(../assets/heart_icon.svg) no-repeat;
+  flex-shrink: 0;
+}
+
 #background {
   width: calc(100vw - 1.6rem);
+  height: calc(100vh - 1.6rem);
+  overflow: hidden;
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);

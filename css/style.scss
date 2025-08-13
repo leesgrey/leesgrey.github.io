@@ -15,14 +15,74 @@
 body {
     background-color: colors.$paper;
     margin: 0;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 p {
     margin: 0;
 }
 
+#popup {
+    @keyframes appear {
+        from { opacity: 0;}
+        to { opacity: 1;}
+    }
+
+    width: 33.125rem;
+    height: 10rem;
+    position: fixed;
+    z-index: 10;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    bottom: 5rem;
+    left: 5rem;
+    opacity: 0;
+    animation: appear 0.1s linear 0.5s;
+    animation-fill-mode: forwards;
+    border: 1px solid black;
+
+    .header {
+        background-color: black;
+        border: 0.25rem solid white;
+        color: white;
+        display: flex;
+        font-size: 12px;
+        padding: 0.25rem 1rem;
+        font-weight: 600;
+        cursor: pointer;
+
+        hr {
+            height: 1px;
+            border: 0;
+            border-top: 1px solid #fff;
+            stroke-width: 1rem;
+            flex-grow: 1;
+            margin-left: 1rem;
+        }
+    }
+
+    .body {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        padding-bottom: 1rem;
+
+        .icon {
+            width: 4.75rem;
+            height: 4.75rem;
+            margin: 0 2.5rem;
+            background: url(../assets/heart_icon.svg) no-repeat;
+            flex-shrink: 0;
+        }
+    }
+}
+
 #background {
     width: calc(100vw - ($padding * 2));
+    height: calc(100vh - ($padding * 2));
+    overflow: hidden;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);

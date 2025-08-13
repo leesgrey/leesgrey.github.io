@@ -5,6 +5,7 @@
 
 #landing {
     margin: 13.625rem auto 0;
+    width: 100%;
     position: relative;
 
     .capsule {
@@ -21,48 +22,58 @@
 
     #name-panel {
         position: relative;
-
+        width: min(600px, calc(100% - 3rem));
+        margin: 0 auto;
         $content-margin: 4.4375rem;
         
         #panel-top {
             height: 3.5825rem;
+            display: flex;
+            gap: 5%;
 
             .stem {
-                width: 1rem;
+                margin-top: 0.4rem;
+                width: 0.795625rem;
                 height: calc(100% - 0.25rem);
                 background: url('../assets/panel_top_stem.svg') no-repeat;
-                display: inline-block;
+                background-size: contain;
+                flex-shrink: 0;
             }
 
             .line {
+                margin-top: 0.4rem;
                 background: url('../assets/panel_top_line.svg') no-repeat;
+                background-position: 0 5px;
                 display: inline-block;
-                width: 38.0625rem;
+                background-size: contain;
                 position: relative;
+                flex-grow: 1;
                 height: calc(100% - 0.625rem);
-                height: 1.28125
             }
 
             .circles {
                 display: inline-block;
                 background: url('../assets/panel_top_circles.svg') no-repeat;
-                width: 3.415rem;
-                height: calc(100% - 0.1875rem);
+                background-size: contain;
                 position: relative;
+                width: 9%;
             }
 
             #greeting {
                 position: absolute;
-                left: $content-margin;
+                left: min($content-margin, 10%);
+                z-index: 1;
             }
 
             .moon {
                 position: absolute;
                 background: url('../assets/halfmoon.svg') no-repeat;
-                width: 7.5625rem;
-                height: 7.5625rem;
-                top: -3.25rem;
-                left: 17rem;
+                background-size: contain;
+                background-position: bottom;
+                width: min(8rem, 16%);
+                height: 3.78rem;
+                top: -3rem;
+                left: 42%;
             }
         }
 
@@ -74,6 +85,7 @@
                 border: 0;
                 border-top: 1px dashed #fff;
                 stroke-width: 1rem;
+                flex-shrink: 1;
             }
 
             #name-top {
@@ -82,13 +94,14 @@
                 margin-top: -0.75rem;
 
                 #name {
-                    font-size: 4rem;
+                    font-size: min(4rem, 10vw);
                     width: fit-content;
                     font-family: Inter, sans-serif;
                     text-transform: lowercase;
                     color: #fff;
                     letter-spacing: 20%;
                     font-weight: 600;
+                    text-wrap: nowrap;
                 }
 
                 .left {
@@ -110,10 +123,11 @@
 
                 #name-kr {
                     font-family: Inter, sans-serif;
-                    font-size: 24px;
+                    font-size: min(1.5rem, 4vw);
                     font-weight: 900;
                     color: white;
                     letter-spacing: 400%;
+                    text-wrap: nowrap;
 
                     //-webkit-text-stroke: 1px colors.$paper;
                 }
