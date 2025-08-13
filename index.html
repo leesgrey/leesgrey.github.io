@@ -10,27 +10,51 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Moirai+One&display=swap" rel="stylesheet">
+        <script defer src="./js/script.js"></script>
     </head>
     <body>
-        <div id="bg-gradient">
+        <div id="popup">
+            <div id="popup-header" class="header uppercase deco">
+                <p>Hey there!</p>
+                <hr>
+            </div>
+            <div class="body">
+                <div class="icon"></div>
+                <div class="text">
+                    <p>
+                        This site is currently under construction to prepare for the next step in my career -- in the meantime, please feel free to check out my <a href="">resume</a>, message me on <a href="">LinkedIn</a>, or send me an <a href="">email</a>!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="background">
             <div id="landing">
                 <div id="name-panel">
                     <div id="panel-top">
-                        <div class="stem base"></div>
-                        <div class="line namepanel-line-expand"></div>
-                        <div class="circles base"></div>
+                        <div class="stem"></div>
+                        <div class="line"></div>
+                        <div class="circles"></div>
                         <div id="greeting" class="capsule">
-                            <p class="uppercase deco greeting-anim">Hello! My name is</p>
+                            <p class="uppercase deco">Hello! My name is</p>
+                        </div>
+                        <div class="moon"></div>
+                    </div>
+                    <div id="panel-content">
+                        <div id="name-top">
+                            <p id="name" class="uppercase">Grey Lee</p>
+                            <hr class="arrow left">
+                        </div>
+                        <div id="name-bottom">
+                            <hr class="arrow right">
+                            <p id="name-kr" class="outline-anim">이시은</p>
                         </div>
                     </div>
-                    <p id="name" class="uppercase name-anim">Grey Lee</p>
-                    <p id="name-outline" class="uppercase outline-anim" aria-hidden="true">Grey Lee</p>
                     <div id="panel-bottom">
-                        <div id="bottomleft-corner" class="immediate-fadein">
+                        <div id="bottomleft-corner">
                             <div class="base"></div>
-                            <div class="line corner-anim"></div>
+                            <div class="line"></div>
                         </div>
-                        <div id="subtitle-container" class="uppercase deco subtitle-anim">
+                        <div id="subtitle-container" class="uppercase deco">
                             <p>
                                 Software Engineer<br>
                                 Game & Web Developer
@@ -38,7 +62,9 @@
                         </div>
                     </div>
                 </div>
-                <div id="landing-menu" class="uppercase deco immediate-fadein">
+                <div id="landing-menu" class="uppercase deco">
+                    <div class="menu-top"></div>
+                    <div class="menu-line"></div>
                     <ul>
                         <li>
                             <div class="item">
@@ -61,28 +87,14 @@
                             </div>
                         </li>
                     </ul>
-                </div>
-                <div class="sidedeco immediate-fadein"></div>
-                <img id="alien" src="https://blob.gifcities.org/gifcities/MXDQR3VDPLOWVDBZIFOSMJK5PNN2PVR3.gif">
-                <div id="landing-grid"></div>
-                <div id="welcome">
-                    <div class="capsule">
-                        <p class="uppercase deco">Welcome to my website :]</p>
-                    </div>
-                    <div id="welcome-stem" class="immediate-fadein"> </div>
-                </div>
-            </div>
-            <div id="about">
-                <div class="box">
-                    <div class="header">
-                        <p class="uppercase deco">I. About</p>
-                    </div>
-                    <div class="content">
-                        <p class="text">
-                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut molestie  scelerisque eros ac efficitur. Suspendisse interdum felis a enim  pellentesque, non ultricies lorem pharetra. Pellentesque consequat sem  quis semper gravida. Pellentesque mollis turpis non mauris porttitor  varius. Suspendisse tempor eros sit amet turpis sagittis, et iaculis ex  iaculis. Nulla facilisi. Praesent tristique tellus at urna consectetur,  scelerisque efficitur purus tincidunt. Mauris ante tellus, feugiat ac  pulvinar ut, viverra vel tortor.
-                        </p>
+                    <div id="welcome">
+                        <div class="capsule">
+                            <p class="uppercase deco">Welcome to my website :]</p>
+                        </div>
+                        <div id="welcome-stem"> </div>
                     </div>
                 </div>
+                <div class="sidedeco"></div>
             </div>
         </div>
     </body>

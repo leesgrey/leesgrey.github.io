@@ -1,0 +1,17 @@
+#projects {
+    margin-top: 5rem;
+    height: 31.25rem;
+
+    .list {
+        float: left;
+        width: 20.125rem;
+        height: 100%;
+        background-color: pink;
+    }
+
+    .box {
+        width: 41.6875rem;
+        height: 100%;
+        float: right;
+    }
+}
