@@ -8,6 +8,7 @@
         width: 33.125rem;
         border: 0.0625rem solid black;
         background-color: colors.$paper;
+        border: 0.0625rem solid #fff;
         
         .header {
             background-color: black;
@@ -15,6 +16,17 @@
             font-size: sizes.$m;
             text-align: right;
             padding: 0.5rem;
+            display: flex;
+            align-items: center;
+
+            hr {
+                height: 1px;
+                border: 0;
+                border-top: 1px solid #fff;
+                stroke-width: 1rem;
+                flex-grow: 1;
+                margin: 0 1rem;
+            }
         }
 
         .content {

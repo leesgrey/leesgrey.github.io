@@ -307,6 +307,7 @@
   width: 33.125rem;
   border: 0.0625rem solid black;
   background-color: #f5f1ea;
+  border: 0.0625rem solid #fff;
 }
 #about .box .header {
   background-color: black;
@@ -314,9 +315,35 @@
   font-size: 0.875rem;
   text-align: right;
   padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+#about .box .header hr {
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #fff;
+  stroke-width: 1rem;
+  flex-grow: 1;
+  margin: 0 1rem;
 }
 #about .box .content {
   padding: 1rem 2rem;
+}
+
+#projects {
+  margin-top: 5rem;
+  height: 31.25rem;
+}
+#projects .list {
+  float: left;
+  width: 20.125rem;
+  height: 100%;
+  background-color: pink;
+}
+#projects .box {
+  width: 41.6875rem;
+  height: 100%;
+  float: right;
 }
 
 :root {
@@ -360,4 +387,29 @@ p {
 ul {
   list-style: none;
   padding: 0;
+}
+
+.box {
+  background-color: #f5f1ea;
+  border: 0.0625rem solid #fff;
+}
+.box .header {
+  background-color: black;
+  color: #f5f1ea;
+  font-size: 0.875rem;
+  text-align: right;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.box .header hr {
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #fff;
+  stroke-width: 1rem;
+  flex-grow: 1;
+  margin: 0 1rem;
+}
+.box .content {
+  padding: 1rem 2rem;
 }/*# sourceMappingURL=style.css.map */
