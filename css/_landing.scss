@@ -7,6 +7,9 @@
     margin: 13.625rem auto 0;
     width: 100%;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .capsule {
         background-color: black;
@@ -23,9 +26,8 @@
     #name-panel {
         position: relative;
         width: min(600px, calc(100% - 3rem));
-        margin: 0 auto;
         $content-margin: 4.4375rem;
-        
+
         #panel-top {
             height: 3.5825rem;
             display: flex;
@@ -197,11 +199,11 @@
 
     #landing-menu {
         background: url("../assets/menu_stem.svg") no-repeat;
-        float: right;
         position: relative;
-        top: 3rem;
-        height: 23.625rem;
-        left: -3rem;
+        left: 20rem;
+        top: 4rem;
+        height: 100vh;
+        width: fit-content;
 
         .menu-top {
             background: url("../assets/menu_top.svg") no-repeat;
@@ -210,9 +212,9 @@
         }
 
         .menu-line {
-            background: url("../assets/menu_line.svg") no-repeat;
+            border-left: 1px solid white;
+            height: 100vh;
             width: 0.0625rem;
-            height: 23rem;
             margin: -0.0625rem 0 0 calc(4.55rem/2);
         }
 

@@ -105,6 +105,9 @@
   margin: 13.625rem auto 0;
   width: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #landing .capsule {
   background-color: black;
@@ -120,7 +123,6 @@
 #landing #name-panel {
   position: relative;
   width: min(600px, 100% - 3rem);
-  margin: 0 auto;
 }
 #landing #name-panel #panel-top {
   height: 3.5825rem;
@@ -268,11 +270,12 @@
 }
 #landing #landing-menu {
   background: url("../assets/menu_stem.svg") no-repeat;
-  float: right;
   position: relative;
-  top: 3rem;
-  height: 23.625rem;
-  left: -3rem;
+  left: 20rem;
+  top: 4rem;
+  height: 100vh;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 #landing #landing-menu .menu-top {
   background: url("../assets/menu_top.svg") no-repeat;
@@ -280,9 +283,9 @@
   height: 0.706875rem;
 }
 #landing #landing-menu .menu-line {
-  background: url("../assets/menu_line.svg") no-repeat;
+  border-left: 1px solid white;
+  height: 100vh;
   width: 0.0625rem;
-  height: 23rem;
   margin: -0.0625rem 0 0 2.275rem;
 }
 #landing #landing-menu ul {
