@@ -112,17 +112,17 @@
 #landing .capsule {
   background-color: black;
   display: inline-flex;
-  padding: 0 1.5rem;
   border: 1px solid #fff;
   border-radius: 0.75rem;
   height: 1.5rem;
   align-items: center;
   font-size: 0.75rem;
   color: #f5f1ea;
+  padding: 0 1rem;
 }
 #landing #name-panel {
   position: relative;
-  width: min(800px, 100% - 4rem);
+  width: min(800px, 100% - 5rem);
 }
 #landing #name-panel #panel-top {
   height: 3.5825rem;
@@ -145,6 +145,7 @@
   background-size: contain;
   position: relative;
   flex-grow: 1;
+  flex-shrink: 1;
   height: calc(100% - 0.625rem);
 }
 #landing #name-panel #panel-top .circles {
@@ -156,13 +157,12 @@
 }
 #landing #name-panel #panel-top #greeting {
   position: absolute;
-  left: min(4.4375rem, 10%);
+  left: min(min(4.4375rem, 10%), 10%);
   z-index: 1;
-  width: 20%;
   white-space: nowrap;
   overflow: hidden;
-  padding: 0 1rem;
   text-overflow: ellipsis;
+  font-size: clamp(0.6rem, 1.5vw, 0.75rem);
 }
 #landing #name-panel #panel-top .moon {
   position: absolute;
@@ -175,7 +175,7 @@
   left: 42%;
 }
 #landing #name-panel #panel-content {
-  margin: 0 4.4375rem;
+  margin: -1rem clamp(0rem, 20vw, 10rem) 0 min(4.4375rem, 10%);
 }
 #landing #name-panel #panel-content .arrow {
   height: 1px;
@@ -190,48 +190,54 @@
   margin-top: -0.75rem;
 }
 #landing #name-panel #panel-content #name-top #name {
-  font-size: min(4rem, 10vw);
+  font-size: clamp(2rem, 10vw, 4rem);
   width: -moz-fit-content;
   width: fit-content;
   font-family: Inter, sans-serif;
   text-transform: lowercase;
   color: #fff;
-  letter-spacing: 0.8rem;
+  letter-spacing: 0.625rem;
   font-weight: 600;
   text-wrap: nowrap;
 }
 #landing #name-panel #panel-content #name-top .left {
   width: 6.25rem;
   margin: 0 0 0 2rem;
+  flex-grow: 1;
 }
 #landing #name-panel #panel-content #name-bottom {
   display: flex;
   align-items: center;
   margin-top: 0.75rem;
+  align-self: flex-end;
 }
 #landing #name-panel #panel-content #name-bottom .right {
   width: 7.125rem;
-  margin: 0 3.21875rem 0 0;
+  margin: 0 clamp(1rem, 8vw, 3rem) 0 0;
+  flex-grow: 1;
 }
 #landing #name-panel #panel-content #name-bottom #name-kr {
   font-family: Inter, sans-serif;
-  font-size: min(1.5rem, 4vw);
+  font-size: clamp(1rem, 3vw, 1.625rem);
   font-weight: 900;
   color: white;
-  letter-spacing: 6rem;
+  letter-spacing: clamp(1rem, 10vw, 6rem);
   text-wrap: nowrap;
+  margin-right: calc(-1 * clamp(1rem, 10vw, 6rem));
 }
 #landing #name-panel #panel-bottom {
-  margin-top: -4rem;
+  display: flex;
 }
 #landing #name-panel #panel-bottom #bottomleft-corner {
   position: relative;
+  transform: translate(0, -50%);
   display: inline-block;
-  width: 20.375rem;
+  width: clamp(1rem, 40%, 20.375rem);
   height: 8.75rem;
 }
 #landing #name-panel #panel-bottom #bottomleft-corner .base {
   background: url("../assets/panel_bottomleft.svg") no-repeat;
+  background-position-y: bottom;
   width: 100%;
   height: 100%;
 }
@@ -244,11 +250,10 @@
   height: 100%;
 }
 #landing #name-panel #panel-bottom #subtitle-container {
-  display: inline-block;
   position: relative;
-  font-size: 1rem;
-  top: -1.35rem;
+  font-size: clamp(1vw, 3vw, 1rem);
   color: #fff;
+  transform: translate(0, clamp(1rem, 4vw, 23%));
   margin-left: 1.5rem;
 }
 #landing #landing-grid {
@@ -335,7 +340,7 @@
 #about .box .header {
   background-color: black;
   color: #f5f1ea;
-  font-size: 0.875rem;
+  font-size: 1rem;
   text-align: right;
   padding: 0.5rem;
   display: flex;
@@ -386,15 +391,15 @@ p {
 }
 
 #popup {
-  width: 33.125rem;
+  width: min(80vw, 33.125rem);
   height: 10rem;
   position: fixed;
   z-index: 10;
   background-color: white;
   display: flex;
   flex-direction: column;
-  bottom: 5rem;
-  left: 5rem;
+  bottom: min(5vw, 5rem);
+  left: min(5vw, 5rem);
   opacity: 0;
   animation: appear 0.1s linear 0.5s;
   animation-fill-mode: forwards;
@@ -464,7 +469,7 @@ p {
 
 .text {
   line-height: 150%;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 ul {
@@ -479,7 +484,7 @@ ul {
 .box .header {
   background-color: black;
   color: #f5f1ea;
-  font-size: 0.875rem;
+  font-size: 1rem;
   text-align: right;
   padding: 0.5rem;
   display: flex;

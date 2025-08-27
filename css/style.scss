@@ -25,19 +25,24 @@ p {
 
 #popup {
     @keyframes appear {
-        from { opacity: 0;}
-        to { opacity: 1;}
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
     }
 
-    width: 33.125rem;
+    width: min(80vw, 33.125rem);
     height: 10rem;
     position: fixed;
     z-index: 10;
     background-color: white;
     display: flex;
     flex-direction: column;
-    bottom: 5rem;
-    left: 5rem;
+    bottom: min(5vw, 5rem);
+    left: min(5vw, 5rem);
     opacity: 0;
     animation: appear 0.1s linear 0.5s;
     animation-fill-mode: forwards;
@@ -114,7 +119,7 @@ ul {
 .box {
     background-color: colors.$paper;
     border: 0.0625rem solid #fff;
-    
+
     .header {
         background-color: black;
         color: colors.$paper;
