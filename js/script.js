@@ -1,5 +1,3 @@
-console.log("hi")
-
 const popupWindow = document.getElementById("popup");
 const popupHeader = document.getElementById("popup-header");
 
@@ -10,6 +8,8 @@ popupHeader.addEventListener("mousedown", (e) => {
     const rect = popupWindow.getBoundingClientRect();
     dragOffset = [e.clientY - rect.top, e.clientX - rect.left]
     popupHeader.style.cursor = "grabbing"
+    popupWindow.style.top = e.clientY - dragOffset[0] + "px"
+    popupWindow.style.bottom = "initial"
 
     document.addEventListener("mousemove", onMouseMove)
 })
