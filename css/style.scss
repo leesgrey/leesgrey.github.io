@@ -34,15 +34,17 @@ p {
         }
     }
 
-    width: min(80vw, 33.125rem);
-    height: 10rem;
+    width: 33.125rem;
+    max-width: calc(100vw - ($padding * 4));
     position: fixed;
     z-index: 10;
     background-color: white;
     display: flex;
     flex-direction: column;
-    bottom: min(5vw, 5rem);
-    left: min(5vw, 5rem);
+
+    bottom: $padding * 2;
+    left: $padding * 2;
+
     opacity: 0;
     animation: appear 0.1s linear 0.5s;
     animation-fill-mode: forwards;
@@ -72,13 +74,16 @@ p {
         display: flex;
         flex-grow: 1;
         align-items: center;
-        padding-bottom: 1rem;
+        padding: 0.5rem 1rem 1rem;
+        gap: 2rem;
 
         .icon {
-            width: 4.75rem;
-            height: 4.75rem;
-            margin: 0 2.5rem;
-            background: url(../assets/heart_icon.svg) no-repeat;
+            width: 6rem;
+            max-width: 20vw;
+            height: 6rem;
+            background: url(../assets/alien.gif) no-repeat;
+            background-position: center;
+            background-size: contain;
             flex-shrink: 0;
         }
     }

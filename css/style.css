@@ -223,10 +223,11 @@
   color: white;
   letter-spacing: clamp(1rem, 10vw, 6rem);
   text-wrap: nowrap;
-  margin-right: calc(-1 * clamp(1rem, 10vw, 6rem));
+  margin-right: -5rem;
 }
 #landing #name-panel #panel-bottom {
   display: flex;
+  margin-left: 0.125rem;
 }
 #landing #name-panel #panel-bottom #bottomleft-corner {
   position: relative;
@@ -236,13 +237,14 @@
   height: 8.75rem;
 }
 #landing #name-panel #panel-bottom #bottomleft-corner .base {
-  background: url("../assets/panel_bottomleft.svg") no-repeat;
-  background-position-y: bottom;
+  background: url("../assets/corner_base.svg") no-repeat;
+  background-size: contain;
+  margin-top: -0.5rem;
   width: 100%;
-  height: 100%;
+  height: 50%;
 }
 #landing #name-panel #panel-bottom #bottomleft-corner .line {
-  background: url("../assets/panel_bottomleft_line.svg") no-repeat;
+  background: url("../assets/corner_line.svg") no-repeat;
   position: absolute;
   left: 0.25rem;
   top: 0.25rem;
@@ -251,7 +253,7 @@
 }
 #landing #name-panel #panel-bottom #subtitle-container {
   position: relative;
-  font-size: clamp(1vw, 3vw, 1rem);
+  font-size: clamp(0.6rem, 2vw, 1rem);
   color: #fff;
   transform: translate(0, clamp(1rem, 4vw, 23%));
   margin-left: 1.5rem;
@@ -281,11 +283,12 @@
 #landing #landing-menu {
   background: url("../assets/menu_stem.svg") no-repeat;
   position: relative;
-  left: 20rem;
-  top: 4rem;
+  left: 10vw;
+  top: clamp(0px, 4vw, 4rem);
   height: 100vh;
-  width: -moz-fit-content;
-  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #landing #landing-menu .menu-top {
   background: url("../assets/menu_top.svg") no-repeat;
@@ -296,12 +299,12 @@
   border-left: 1px solid white;
   height: 100vh;
   width: 0.0625rem;
-  margin: -0.0625rem 0 0 2.275rem;
+  margin-left: 0.0625rem;
 }
 #landing #landing-menu ul {
-  margin-left: 1.375rem;
+  margin-left: 6rem;
   color: #f5f1ea;
-  font-size: 1rem;
+  font-size: clamp(0.75rem, 2vw, 1rem);
   position: absolute;
   top: 3rem;
   text-wrap: nowrap;
@@ -312,20 +315,38 @@
   border: 1px solid #fff;
   background-color: black;
   margin-bottom: -0.0625rem;
+  cursor: not-allowed;
+}
+#landing #landing-menu ul .item:hover {
+  background-color: #f5f1ea;
+  color: #000;
 }
 #landing #landing-menu #welcome {
-  float: right;
   position: absolute;
-  top: 14rem;
-  right: 5.1rem;
   text-wrap: nowrap;
+  top: 16rem;
+  right: 50%;
+}
+#landing #landing-menu #welcome .capsule {
+  margin-right: 2rem;
+  font-size: clamp(0.6rem, 1.5vw, 0.75rem);
+  width: 230px;
+  max-width: 30vw;
+  text-wrap: wrap;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0 0.75rem;
+  border-radius: 4rem;
+}
+#landing #landing-menu #welcome .capsule p {
+  margin: 0.5rem 0;
+  text-align: center;
 }
 #landing #landing-menu #welcome #welcome-stem {
-  position: relative;
   background: url(../assets/welcome_stem.svg) no-repeat;
+  background-position-x: right;
   height: 2.375rem;
   top: -1px;
-  left: 12rem;
 }
 
 #about {
@@ -391,15 +412,15 @@ p {
 }
 
 #popup {
-  width: min(80vw, 33.125rem);
-  height: 10rem;
+  width: 33.125rem;
+  max-width: calc(100vw - 3.2rem);
   position: fixed;
   z-index: 10;
   background-color: white;
   display: flex;
   flex-direction: column;
-  bottom: min(5vw, 5rem);
-  left: min(5vw, 5rem);
+  bottom: 1.6rem;
+  left: 1.6rem;
   opacity: 0;
   animation: appear 0.1s linear 0.5s;
   animation-fill-mode: forwards;
@@ -435,13 +456,16 @@ p {
   display: flex;
   flex-grow: 1;
   align-items: center;
-  padding-bottom: 1rem;
+  padding: 0.5rem 1rem 1rem;
+  gap: 2rem;
 }
 #popup .body .icon {
-  width: 4.75rem;
-  height: 4.75rem;
-  margin: 0 2.5rem;
-  background: url(../assets/heart_icon.svg) no-repeat;
+  width: 6rem;
+  max-width: 20vw;
+  height: 6rem;
+  background: url(../assets/alien.gif) no-repeat;
+  background-position: center;
+  background-size: contain;
   flex-shrink: 0;
 }
 

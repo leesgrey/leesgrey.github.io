@@ -138,7 +138,7 @@
                     color: white;
                     letter-spacing: clamp(1rem, 10vw, 6rem);
                     text-wrap: nowrap;
-                    margin-right: calc(-1 * clamp(1rem, 10vw, 6rem));
+                    margin-right: -5rem;
 
                     //-webkit-text-stroke: 1px colors.$paper;
                 }
@@ -147,6 +147,7 @@
 
         #panel-bottom {
             display: flex;
+            margin-left: 0.125rem;
 
             #bottomleft-corner {
                 position: relative;
@@ -156,14 +157,15 @@
                 height: 8.75rem;
 
                 .base {
-                    background: url('../assets/panel_bottomleft.svg') no-repeat;
-                    background-position-y: bottom;
+                    background: url('../assets/corner_base.svg') no-repeat;
+                    background-size: contain;
+                    margin-top: -0.5rem;
                     width: 100%;
-                    height: 100%;
+                    height: 50%;
                 }
 
                 .line {
-                    background: url('../assets/panel_bottomleft_line.svg') no-repeat;
+                    background: url('../assets/corner_line.svg') no-repeat;
                     position: absolute;
                     left: 0.25rem;
                     top: 0.25rem;
@@ -174,7 +176,7 @@
 
             #subtitle-container {
                 position: relative;
-                font-size: clamp(1vw, 3vw, sizes.$m);
+                font-size: clamp(0.6rem, 2vw, sizes.$m);
                 color: #fff;
                 transform: translate(0, clamp(1rem, 4vw, 23%));
                 margin-left: 1.5rem;
@@ -210,10 +212,12 @@
     #landing-menu {
         background: url("../assets/menu_stem.svg") no-repeat;
         position: relative;
-        left: 20rem;
-        top: 4rem;
+        left: 10vw;
+        top: clamp(0px, 4vw, 4rem);
         height: 100vh;
-        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         .menu-top {
             background: url("../assets/menu_top.svg") no-repeat;
@@ -225,13 +229,13 @@
             border-left: 1px solid white;
             height: 100vh;
             width: 0.0625rem;
-            margin: -0.0625rem 0 0 calc(4.55rem/2);
+            margin-left: 0.0625rem;
         }
 
         ul {
-            margin-left: 1.375rem;
+            margin-left: 6rem;
             color: colors.$paper;
-            font-size: sizes.$m;
+            font-size: clamp(0.75rem, 2vw, sizes.$m);
             position: absolute;
             top: 3rem;
             text-wrap: nowrap;
@@ -242,22 +246,42 @@
                 border: 1px solid #fff;
                 background-color: black;
                 margin-bottom: -0.0625rem;
+                cursor: not-allowed;
+
+                &:hover {
+                    background-color: colors.$paper;
+                    color: #000;
+                }
             }
         }
 
         #welcome {
-            float: right;
             position: absolute;
-            top: 14rem;
-            right: 5.1rem;
             text-wrap: nowrap;
+            top: 16rem;
+            right: 50%;
+
+            .capsule {
+                margin-right: 2rem;
+                font-size: clamp(0.6rem, 1.5vw, sizes.$s);
+                width: 230px;
+                max-width: 30vw;
+                text-wrap: wrap;
+                height: fit-content;
+                padding: 0 0.75rem;
+                border-radius: 4rem;
+
+                p {
+                    margin: 0.5rem 0;
+                    text-align: center;
+                }
+            }
 
             #welcome-stem {
-                position: relative;
                 background: url(../assets/welcome_stem.svg) no-repeat;
+                background-position-x: right;
                 height: 2.375rem;
                 top: -1px;
-                left: 12rem;
             }
         }
     }
