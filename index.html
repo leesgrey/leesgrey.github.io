@@ -1,112 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-
-    <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="./assets/heart_icon.svg">
-    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Moirai+One&display=swap" rel="stylesheet">
-    <script defer src="./js/script.js"></script>
-    <title>hi! | leesgrey</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-</head>
-
-<body>
-    <div id="popup">
-        <div id="popup-header" class="header uppercase deco">
-            <p>Hey there!</p>
-            <hr>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sono:wght,MONO@200..800,1&display=swap" rel="stylesheet">
+        <meta charset="utf-8">
+        <title>leesgrey</title>
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://cdn.jsdelivr.net/npm/three@v0.182.0/build/three.module.js",
+                    "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.182.0/examples/jsm/"
+                }
+            }
+        </script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script type="module" src="/main.js"></script>
+        <div id="menu">
+            <ul>
+                <li>
+                    <p>About</p>
+                </li>
+                <li>
+                    <p>Projects</p>
+                </li>
+                <li>
+                    <p>Links</p>
+                </li>
+                <li>
+                    <p>Contact</p>
+                </li>
+            </ul>
+            <div id="progress"></div>
         </div>
-        <div class="body">
-            <div class="icon"></div>
-            <div class="text">
-                <p>
-                    This site is currently under construction to prepare for my next step in my career -- in the
-                    meantime, please feel free to check out my <a href="assets/resume.pdf" target="_blank">resume</a>,
-                    message me on <a href="https://www.linkedin.com/in/leesgrey/" target="_blank">LinkedIn</a>, or send
-                    me an email
-                    at <a href="mailto:greysv.lee@gmail.com">greysv.lee@gmail.com</a>!
-                </p>
-            </div>
-        </div>
-    </div>
-    <div id="background">
         <div id="landing">
-            <div id="name-panel">
-                <div id="panel-top">
-                    <div class="stem"></div>
-                    <div class="line"></div>
-                    <div class="circles"></div>
-                    <div id="greeting" class="capsule">
-                        <p class="uppercase deco">Hello! My name is</p>
-                    </div>
-                    <div class="moon"></div>
+            <div class="window">
+                <div class="header">
+                    <p>Hello!</p>
                 </div>
-                <div id="panel-content">
-                    <div id="name-top">
-                        <p id="name" class="uppercase">Grey Lee</p>
-                        <hr class="arrow left">
-                    </div>
-                    <div id="name-bottom">
-                        <hr class="arrow right">
-                        <p id="name-kr" class="outline-anim">이시은</p>
-                    </div>
-                </div>
-                <div id="panel-bottom">
-                    <div id="bottomleft-corner">
-                        <div class="base"></div>
-                        <div class="line"></div>
-                    </div>
-                    <div id="subtitle-container" class="uppercase deco">
-                        <p>
-                            Software Engineer<br>
-                            Game & Web Developer
-                        </p>
-                    </div>
+                <div class="body">
+                    <p>My name is Grey Lee. Welcome to my website :]</p>
                 </div>
             </div>
-            <div id="landing-menu" class="uppercase deco">
-                <div class="menu-top"></div>
-                <div class="menu-line"></div>
+            <div id="window-to-menu" class="line"></div>
+            <div id="landing-menu">
                 <ul>
                     <li>
-                        <div class="item">
-                            <p>I. About</p>
-                        </div>
+                        <p>About</p>
                     </li>
                     <li>
-                        <div class="item">
-                            <p>II. Projects</p>
-                        </div>
+                        <p>Projects</p>
                     </li>
                     <li>
-                        <div class="item">
-                            <p>III. Links</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <p>IV. Contact</p>
-                        </div>
+                        <p>Contact</p>
                     </li>
                 </ul>
-                <div id="welcome">
-                    <div class="capsule">
-                        <p class="uppercase deco">Welcome to my website :]</p>
+            </div>
+            <div id="menu-to-about" class="line"></div>
+        </div>
+        <div id="content">
+            <div id="about" class="panel">
+                <div class="window">
+                    <div class="header">
+                        <p>About</p>
                     </div>
-                    <div id="welcome-stem"> </div>
+                    <div class="body">
+                        <div id="about-overview">
+                            <p>Hi! I'm a software engineer and game developer based in Boston, MA. I attended the University of Toronto for computer science with a focus on graphics and game development.</p>
+                            <br>
+                            <p>I have a passion for interaction design, storytelling, and accessibility in software. My journey into programming started with a love of art and animation, and I've since been driven to foster human connection and creativity with technology.</p>
+                            <br>
+                            <p>I also like music, swords, and bread.</p>
+                        </div>
+                        <div id="about-tech">
+                            <p>Through my work I have significant experience with JavaScript, particularly with React, Ember, and Next.js. C++. I've worked in Unreal Engine, Unity, and Godot, along with proprietary C++ engines.</p>
+                            <br>
+                            <p>Accessibility one of my core design values. Technology should be approachable for everyone, especially given its growing necessity in everyday life, and I believe that prioritizing intuitive and joyful user experiences is critical for a more equitable future.</p>
+                        </div>
+                        <div id="about-games">
+                            <p>As a game developer, I aim to explore the impact of interactivity on storytelling and narrative design. My favorite games include Pathologic and Dishonored, and their focus on environment and decisionmaking.</p>
+                        </div>
+                        <div id="about-hobbies">
+                            <p>In my spare time I play the viola in a handful of community orchestras and chamber ensembles. I also study the blade at a historical fencing club with a personal focus on rapier and dagger.</p>
+                            <br>
+                            <p>Otherwise I enjoy baking, watching movies, going to goth clubs, and studying Latin.</p>
+                        </div>
+                        <div class="button-row">
+                            <div class="button">
+                                <a>overview</a>
+                            </div>
+                            <div class="button">
+                                <a>tech</a>
+                            </div>
+                            <div class="button">
+                                <a>games</a>
+                            </div>
+                            <div class="button">
+                                <a>hobbies</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="sidedeco"></div>
+            <div id="projects" class="panel">
+                <div class="window">
+                    <div class="header">
+                        <p>WORK</p>
+                    </div>
+                    <div class="body">
+                        <p>Hello again!</p>
+                        <br>
+                        <p>I strive to explore the intersection of art, technology, and storytelling.</p>
+                        <br>
+                        <p>In my spare time, I play the viola in a handful of community orchestras and chamber ensembles! I also study the blade at a historical fencing club with a personal focus on rapier and dagger.</p>
+                        <br>
+                        <p>Otherwise I enjoy baking, watching movies, and studying Latin.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="contact" class="panel">
+                <div class="window">
+                    <div class="header">
+                        <p>CONTACT</p>
+                    </div>
+                    <div class="body">
+                        <ul>
+                            <li>
+                                <a href="" target="_blank" src="">GitHub</a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" src="">LinkedIn</a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" src="">Itch</a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" src="">ART</a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/watch?v=REM3sD7FatY" target="_blank">CORGI SNOW TUnnel</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="window">
+                    <div class="header">
+                        <p>LINKS</p>
+                    </div>
+                    <div class="body">
+                        <ul>
+                            <li>
+                                <a href="" target="_blank" src="">GitHub</a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" src="">LinkedIn</a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" src="">Itch</a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/watch?v=REM3sD7FatY" target="_blank">CORGI SNOW TUnnel</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</body>
-
+    </body>
 </html>
