@@ -13,20 +13,20 @@
                 }
             }
         </script>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <div id="cursor"></div>
         <div id="cursor-tail"></div>
-        <script type="module" src="/main.js"></script>
+        <script type="module" src="js/main.js"></script>
         <div id="progress" aria-hidden="true">
+            <div id="bar"></div>
             <div class="links">
                 <p class="progress-link clickable" id="progress-about">About</p>
                 <p class="progress-link clickable" id="progress-projects">Projects</p>
                 <p class="progress-link clickable" id="progress-links">Links</p>
                 <p class="progress-link clickable" id="progress-contact">Contact</p>
             </div>
-            <div id="bar"></div>
         </div>
         <div class="panel" id="landing">
             <div class="window">
@@ -38,7 +38,9 @@
                 </div>
             </div>
             <div id="window-to-menu" class="line"></div>
-            <a href="#about" class="clickable navbutton button next"></a>
+            <a href="#about" class="clickable navbutton button next">
+                <div class="arrow"></div>
+            </a>
             <div id="menu-to-about" class="line"></div>
         </div>
         <div id="content">
@@ -87,7 +89,9 @@
                         </div>
                 </div>
                 <div class="line"></div>
-                <a href="#projects" class="clickable navbutton button next"></a>
+                <a href="#projects" class="clickable navbutton button next">
+                    <div class="arrow"></div>
+                </a>
                 <div class="line"></div>
             </div>
             <div id="projects" class="panel">
@@ -106,7 +110,9 @@
                     </div>
                 </div>
                 <div class="line"></div>
-                <a href="#links" class="clickable navbutton button next"></a>
+                <a href="#links" class="clickable navbutton button next">
+                    <div class="arrow"></div>
+                </a>
                 <div class="line"></div>
             </div>
             <div id="links" class="panel">
@@ -145,7 +151,9 @@
                     </div>
                 </div>
                 <div class="line"></div>
-                <a href="#contact" class="navbutton clickable button next"></a>
+                <a href="#contact" class="navbutton clickable button next">
+                    <div class="arrow"></div>
+                </a>
                 <div class="line"></div>
             </div>
             <div id="contact" class="panel">
