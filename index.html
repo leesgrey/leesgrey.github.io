@@ -9,8 +9,7 @@
         <script type="importmap">
             {
                 "imports": {
-                    "three": "https://cdn.jsdelivr.net/npm/three@v0.182.0/build/three.module.js",
-                    "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.182.0/examples/jsm/"
+                    "three": "https://cdn.jsdelivr.net/npm/three@v0.182.0/build/three.module.js"
                 }
             }
         </script>
@@ -18,24 +17,16 @@
     </head>
     <body>
         <script type="module" src="/main.js"></script>
-        <div id="menu">
-            <ul>
-                <li>
-                    <p>About</p>
-                </li>
-                <li>
-                    <p>Projects</p>
-                </li>
-                <li>
-                    <p>Links</p>
-                </li>
-                <li>
-                    <p>Contact</p>
-                </li>
-            </ul>
-            <div id="progress"></div>
+        <div id="progress" aria-hidden="true">
+            <div class="links">
+                <p class="progress-link" id="progress-about">About</p>
+                <p class="progress-link" id="progress-projects">Projects</p>
+                <p class="progress-link" id="progress-links">Links</p>
+                <p class="progress-link" id="progress-contact">Contact</p>
+            </div>
+            <div id="bar"></div>
         </div>
-        <div id="landing">
+        <div class="panel" id="landing">
             <div class="window">
                 <div class="header">
                     <p>Hello!</p>
@@ -45,19 +36,7 @@
                 </div>
             </div>
             <div id="window-to-menu" class="line"></div>
-            <div id="landing-menu">
-                <ul>
-                    <li>
-                        <p>About</p>
-                    </li>
-                    <li>
-                        <p>Projects</p>
-                    </li>
-                    <li>
-                        <p>Contact</p>
-                    </li>
-                </ul>
-            </div>
+            <a href="#about" class="button next"></a>
             <div id="menu-to-about" class="line"></div>
         </div>
         <div id="content">
@@ -67,42 +46,47 @@
                         <p>About</p>
                     </div>
                     <div class="body">
-                        <div id="about-overview">
+                        <div id="about-overview" class="page visible">
                             <p>Hi! I'm a software engineer and game developer based in Boston, MA. I attended the University of Toronto for computer science with a focus on graphics and game development.</p>
                             <br>
-                            <p>I have a passion for interaction design, storytelling, and accessibility in software. My journey into programming started with a love of art and animation, and I've since been driven to foster human connection and creativity with technology.</p>
+                            <p>I have a passion for interaction design, storytelling, and accessibility in software. My interest in programming stemmed from a love of art and animation, and I've since been driven to foster human connection and creativity with technology.</p>
                             <br>
                             <p>I also like music, swords, and bread.</p>
                         </div>
-                        <div id="about-tech">
+                        <div id="about-tech"class="page">
                             <p>Through my work I have significant experience with JavaScript, particularly with React, Ember, and Next.js. C++. I've worked in Unreal Engine, Unity, and Godot, along with proprietary C++ engines.</p>
                             <br>
                             <p>Accessibility one of my core design values. Technology should be approachable for everyone, especially given its growing necessity in everyday life, and I believe that prioritizing intuitive and joyful user experiences is critical for a more equitable future.</p>
                         </div>
-                        <div id="about-games">
+                        <div id="about-games"class="page">
                             <p>As a game developer, I aim to explore the impact of interactivity on storytelling and narrative design. My favorite games include Pathologic and Dishonored, and their focus on environment and decisionmaking.</p>
+                            <br>
+                            <p>I'm active in the Boston dev scene. Friction, accessibility, and Godot.</p>
                         </div>
-                        <div id="about-hobbies">
+                        <div id="about-hobbies"class="page">
                             <p>In my spare time I play the viola in a handful of community orchestras and chamber ensembles. I also study the blade at a historical fencing club with a personal focus on rapier and dagger.</p>
                             <br>
                             <p>Otherwise I enjoy baking, watching movies, going to goth clubs, and studying Latin.</p>
                         </div>
-                        <div class="button-row">
-                            <div class="button">
-                                <a>overview</a>
+                    </div>
+                        <div id="about-buttons" class="button-row">
+                            <div class="button selected">
+                                <p>overview</p>
                             </div>
                             <div class="button">
-                                <a>tech</a>
+                                <p>tech</p>
                             </div>
                             <div class="button">
-                                <a>games</a>
+                                <p>games</p>
                             </div>
                             <div class="button">
-                                <a>hobbies</a>
+                                <p>hobbies</p>
                             </div>
                         </div>
-                    </div>
                 </div>
+                <div class="line"></div>
+                <a href="#projects" class="button next"></a>
+                <div class="line"></div>
             </div>
             <div id="projects" class="panel">
                 <div class="window">
@@ -119,51 +103,52 @@
                         <p>Otherwise I enjoy baking, watching movies, and studying Latin.</p>
                     </div>
                 </div>
+                <div class="line"></div>
+                <a href="#links" class="button next"></a>
+                <div class="line"></div>
             </div>
-            <div id="contact" class="panel">
-                <div class="window">
-                    <div class="header">
-                        <p>CONTACT</p>
-                    </div>
-                    <div class="body">
-                        <ul>
-                            <li>
-                                <a href="" target="_blank" src="">GitHub</a>
-                            </li>
-                            <li>
-                                <a href="" target="_blank" src="">LinkedIn</a>
-                            </li>
-                            <li>
-                                <a href="" target="_blank" src="">Itch</a>
-                            </li>
-                            <li>
-                                <a href="" target="_blank" src="">ART</a>
-                            </li>
-                            <li>
-                                <a href="https://www.youtube.com/watch?v=REM3sD7FatY" target="_blank">CORGI SNOW TUnnel</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <div id="links" class="panel">
                 <div class="window">
                     <div class="header">
                         <p>LINKS</p>
                     </div>
                     <div class="body">
-                        <ul>
+                        <ul id="links-container">
                             <li>
-                                <a href="" target="_blank" src="">GitHub</a>
+                                <p>💻 GitHub:</p>
+                                <a href="https://github.com/leesgrey" target="_blank" src="">github.com/leesgrey</a>
                             </li>
                             <li>
-                                <a href="" target="_blank" src="">LinkedIn</a>
+                                <p>🤝 LinkedIn:</p>
+                                <a href="https://www.linkedin.com/in/leesgrey/" target="_blank" src="">linkedin.com/in/leesgrey</a>
                             </li>
                             <li>
-                                <a href="" target="_blank" src="">Itch</a>
+                                <p>📄 Résumé:</p>
+                                <a href="" target="_blank" src="">linkedin.com/in/leesgrey</a>
                             </li>
                             <li>
-                                <a href="https://www.youtube.com/watch?v=REM3sD7FatY" target="_blank">CORGI SNOW TUnnel</a>
+                                <p>🕹️ Itch.io:</p>
+                                <a href="https://snakeoverhead.itch.io/" target="_blank" src="">snakeoverhead.itch.io</a>
+                            </li>
+                            <li>
+                                <p>❄️ Corgi Snow Tunnel:</p>
+                                <a href="https://www.youtube.com/watch?v=REM3sD7FatY" target="_blank">Corgi Snow Tunnel</a>
                             </li>
                         </ul>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <a href="#contact" class="button next"></a>
+                <div class="line"></div>
+            </div>
+            <div id="contact" class="panel">
+                <div class="line"></div>
+                <div class="window">
+                    <div class="header">
+                        <p>CONTACT</p>
+                    </div>
+                    <div class="body">
+                        <p>Feel free to reach out or email me at greysv.lee@gmail.com</p>
                     </div>
                 </div>
             </div>

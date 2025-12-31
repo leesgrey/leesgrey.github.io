@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -20,6 +24,44 @@ ul {
 a {
     font-family: "Sono", monospace;
     text-transform: uppercase;
+    color: #e25d34;
+    text-decoration: #e25d34 wavy underline 0.07rem;
+}
+
+.button {
+    border: 1px solid #e29734;
+    color: #e29734;
+    transition: all 0.1s ease;
+    cursor: pointer;
+    background-color: #e297343b;
+
+    p {
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &:hover {
+        background-color: #e29734;
+        color: #191822;
+    }
+
+    &:active {
+        background-color: #e29734b0;
+    }
+
+    &.next {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 1.5rem;
+    }
+
+    &.selected {
+        background-color: #e29734;
+        color: #191822;
+        cursor:default;
+    }
 }
 
 #content {
@@ -29,16 +71,23 @@ a {
 
 .line {
     border-left: 1px solid #e29734;
+    flex-grow: 1;
 }
 
-#landing {
+.panel {
+    height: 100vh;
+    margin-top: -5rem;
+    padding-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
+}
 
-    width: 100vw;
-    color: white;
-    height: 100vh;
+#landing {
+    height: 110vh;
+    margin-top: 0rem;
+    padding-top: 0rem;
 
     .window {
         margin-top: 30vh;
@@ -46,15 +95,18 @@ a {
 
     #landing-menu {
         border: 1px solid #e29734;
+        padding: 0.25rem;
+        color: #e25d34;
+
+        a {
+            text-decoration: none;
+            color: #e29734;
+        }
     }
 
     #window-to-menu {
-        height: 10rem;
+        flex-grow: 1;
     }
-}
-
-.panel {
-    min-height: 80vh;
 }
 
 .window {
@@ -68,10 +120,24 @@ a {
     }
 
     .body {
-        color: white;
+        color: #f6efe5;
         border: 1px solid #e29734;
         padding: 1rem;
         text-transform: none;
+        overflow: scroll;
+        
+        .page {
+            max-height: 0;
+            opacity: 0;
+            transition: 
+                all 0.25s ease;
+
+            &.visible {
+                transition: all 0.25s ease 0.25s;
+                max-height: 10rem;
+                opacity: 1;
+            }
+        }
     }
 
     .button-row {
@@ -79,18 +145,10 @@ a {
         flex-direction: row;
         gap: 1rem;
         justify-content: flex-end;
-        margin-top: 1rem;
+        margin-top: 0.25rem;
 
         .button {
-            border: 1px solid #e29734;
-            min-width: 10rem;
-            background-color: #e297343b;
-
-            a {
-                width: 100%;
-                display: inline-block;
-                text-align: center;
-            }
+            min-width: 8rem;
         }
     }
 }
@@ -99,24 +157,68 @@ a {
     flex-grow: 1;
 }
 
-#menu {
+#progress {
     width: 100vw;
     position: fixed;
     bottom: 0;
+    background-color: #191822;
+    user-select: none;
 
-    #progress {
+    #bar {
         position: absolute;
         top: 0;
         background-color: #e29734;
-        width: 50%;
+        width: 0%;
         height: 100%;
         z-index: -1;
+        transition: width 0.5s ease;
     }
 
-    ul {
+    .links {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
+        text-transform: uppercase;
+        color: #e29734;
+        transition: color 0.5s ease 0.25s;
+
+        p {
+            cursor: pointer;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .passed {
+            color: #191822;
+            transition: color 0.5s ease 0.25s;
+        }
+    }
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .window {
+        width: 40rem;
+    }
+    .body {
+        height: 24rem;
+    }
+}
+
+#links {
+    #links-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+#contact {
+    .window {
+        margin-bottom: 50vh;
     }
 }
