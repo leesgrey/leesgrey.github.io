@@ -1,6 +1,8 @@
 let prevScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 var currentPage = "landing"
 var progressBar = document.getElementById("bar");
+var cursor = document.getElementById("cursor");
+var cursorTail = document.getElementById("cursor-tail");
 
 function setUpAboutButtons() {
     var aboutButtonContainer = document.getElementById("about-buttons");
@@ -23,6 +25,30 @@ function setUpAboutButtons() {
         })
     }
 }
+
+var buttons = document.getElementsByClassName("button")
+for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("mouseenter", () => {
+        cursorTail.classList.add("point")
+    })
+    buttons[i].addEventListener("mouseleave", () => {
+        cursorTail.classList.remove("point")
+    })
+    buttons[i].addEventListener("mousedown", () => {
+        cursorTail.classList.add("click")
+    })
+    buttons[i].addEventListener("mouseup", () => {
+        cursorTail.classList.remove("click")
+    })
+}
+
+
+document.addEventListener("mousemove", (e) => {
+    cursor.style.top = e.pageY + "px"
+    cursorTail.style.top = e.pageY + "px"
+    cursor.style.left = e.pageX + "px"
+    cursorTail.style.left = e.pageX + "px"
+})
 
 document.addEventListener("scrollend", () => {
     var panels = document.getElementsByClassName("panel")

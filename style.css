@@ -5,6 +5,7 @@ html {
 * {
     margin: 0;
     box-sizing: border-box;
+    cursor: none;
 }
 
 p {
@@ -28,11 +29,49 @@ a {
     text-decoration: #e25d34 wavy underline 0.07rem;
 }
 
+#cursor {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #e29734;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: exclusion;
+    pointer-events: none;
+    z-index: 10;
+}
+
+#cursor-tail {
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 1rem;
+    height: 1rem;
+    background-color: #e29734;
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 100ms linear, height 100ms linear, top 100ms, left 100ms;
+    mix-blend-mode: exclusion;
+    pointer-events: none;
+
+    &.point {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    &.click {
+        width: 0.75rem;
+        height: 0.75rem;
+    }
+}
+
 .button {
     border: 1px solid #e29734;
     color: #e29734;
     transition: all 0.1s ease;
-    cursor: pointer;
     background-color: #e297343b;
 
     p {
@@ -60,7 +99,6 @@ a {
     &.selected {
         background-color: #e29734;
         color: #191822;
-        cursor:default;
     }
 }
 
@@ -184,7 +222,6 @@ a {
         transition: color 0.5s ease 0.25s;
 
         p {
-            cursor: pointer;
             flex-grow: 1;
             text-align: center;
         }
