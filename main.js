@@ -73,7 +73,6 @@ var progressBarButtons = document.getElementsByClassName("progress-link")
 function updateProgressBar(pageName) {
     var passed = (pageName != "landing")
     for (let i = 0; i < progressBarButtons.length; i++) {
-        console.log("i:", i, "passed:", passed)
         if (passed) {
             progressBarButtons[i].classList.add("passed")
         }
@@ -97,12 +96,13 @@ function updateProgressBar(pageName) {
 function setUpProgressBar() {
     document.getElementsByClassName("panel")
 
-    var nextButtons = document.getElementsByClassName("next");
+    var nextButtons = document.getElementsByClassName("navbutton");
     for (let i = 0; i < nextButtons.length; i++) {
-        nextButtons[i].addEventListener("click", () => {
+        nextButtons[i].addEventListener("click", (e) => {
+            e.preventDefault();
             var nextPageName = nextButtons[i].getAttribute('href').slice(1)
             currentPage = nextPageName
-            updateProgressBar(nextPageName)
+            scrollToPage(nextPageName)
         });
     }
 
@@ -116,7 +116,3 @@ function setUpProgressBar() {
 
 setUpAboutButtons();
 setUpProgressBar();
-
-if (window.location.hash) {
-    updateProgressBar(window.location.hash.substring(1))
-}
