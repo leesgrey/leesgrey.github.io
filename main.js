@@ -26,18 +26,18 @@ function setUpAboutButtons() {
     }
 }
 
-var buttons = document.getElementsByClassName("button")
-for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener("mouseenter", () => {
+var clickables = document.getElementsByClassName("clickable")
+for (let i = 0; i < clickables.length; i++) {
+    clickables[i].addEventListener("mouseenter", () => {
         cursorTail.classList.add("point")
     })
-    buttons[i].addEventListener("mouseleave", () => {
+    clickables[i].addEventListener("mouseleave", () => {
         cursorTail.classList.remove("point")
     })
-    buttons[i].addEventListener("mousedown", () => {
+    clickables[i].addEventListener("mousedown", () => {
         cursorTail.classList.add("click")
     })
-    buttons[i].addEventListener("mouseup", () => {
+    clickables[i].addEventListener("mouseup", () => {
         cursorTail.classList.remove("click")
     })
 }

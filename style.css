@@ -19,12 +19,10 @@ body {
 ul {
     list-style: none;
     padding: 0;
-    text-transform: uppercase;
 }
 
 a {
     font-family: "Sono", monospace;
-    text-transform: uppercase;
     color: #e25d34;
     text-decoration: #e25d34 wavy underline 0.07rem;
 }
@@ -251,6 +249,18 @@ a {
         display: flex;
         flex-direction: column;
         gap: 2rem;
+
+        p {
+            display: inline-block;
+        }
+
+        .sub {
+            display: block;
+            font-size: 0.75rem;
+            font-style: italic;
+            color:#997546;
+            margin-top: 0.25rem;
+        }
     }
 }
 
