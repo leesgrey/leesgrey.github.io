@@ -140,5 +140,22 @@ function setUpProgressBar() {
     }
 }
 
+var emailLink = document.getElementsByClassName("copy")[0]
+var copyNotif = document.getElementById("copy-notif");
+emailLink.addEventListener("click", () => {
+    navigator.clipboard.writeText("greysv.lee@gmail.com")
+        .then(() => {
+            copyNotif.style.maxWidth = "10rem"
+            copyNotif.style.padding = "0 0.5rem 0"
+            setTimeout(() => {
+                copyNotif.style.maxWidth = "0"
+                copyNotif.style.padding = "0"
+            }, 3000)
+        })
+    }
+)
+
+
+
 setUpAboutButtons();
 setUpProgressBar();

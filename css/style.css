@@ -116,6 +116,9 @@ a {
 #content {
     width: 50rem;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .line {
@@ -290,7 +293,37 @@ a {
 }
 
 #contact {
-    .window {
-        margin-bottom: 50vh;
+    width: 30rem;
+
+    .copy {
+        color: #e25d34;
+    }
+
+    #thanks {
+        text-align: center;
+        font-size: 0.75rem;
+        width: 10rem;
+        margin-bottom: 30vh;
+        border: 1px solid #e29734;
+        color: #f6efe5;
+        padding: 1rem;
+        border-radius: 5rem;
+    }
+
+    #copy-notif {
+        background-color: #e29734;
+        color: #191822;
+        padding: 0;
+        transition: all 0.5s ease;
+        align-self: flex-end;
+        width: fit-content;
+        max-width: 0;
+        font-size: 0.75rem;
+        height: 1rem;
+    }
+
+    .line {
+        margin-top: -1rem;
+
     }
 }
