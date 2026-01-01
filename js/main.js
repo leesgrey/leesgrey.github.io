@@ -4,6 +4,7 @@ var progressBar = document.getElementById("bar");
 var cursor = document.getElementById("cursor");
 var cursorTail = document.getElementById("cursor-tail");
 
+
 function setUpAboutButtons() {
     var aboutButtonContainer = document.getElementById("about-buttons");
     var aboutButtons = aboutButtonContainer.querySelectorAll(".button");
@@ -52,7 +53,7 @@ document.addEventListener("mousemove", (e) => {
 
 document.addEventListener("scrollend", () => {
     var panels = document.getElementsByClassName("panel")
-    const st = Math.round(window.pageYOffset || document.documentElement.scrollTop);
+    const st = Math.floor(window.pageYOffset || document.documentElement.scrollTop);
 
     if (Math.abs(st - prevScrollTop) < 80) {
         scrollToPage(currentPage)
@@ -150,11 +151,10 @@ emailLink.addEventListener("click", () => {
             setTimeout(() => {
                 copyNotif.style.maxWidth = "0"
                 copyNotif.style.padding = "0"
-            }, 3000)
+            }, 2000)
         })
     }
 )
-
 
 
 setUpAboutButtons();
