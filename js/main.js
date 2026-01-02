@@ -53,7 +53,7 @@ document.addEventListener("mousemove", (e) => {
 
 document.addEventListener("scrollend", () => {
     var panels = document.getElementsByClassName("panel")
-    const st = Math.floor(window.pageYOffset || document.documentElement.scrollTop);
+    var st = Math.floor(window.pageYOffset || document.documentElement.scrollTop);
 
     if (Math.abs(st - prevScrollTop) < 80) {
         scrollToPage(currentPage)
@@ -75,6 +75,7 @@ document.addEventListener("scrollend", () => {
     }
     else if (st < prevScrollTop) {
         // upscroll: go to first panel <= st
+        st += 1
         for (let i = 0; i < panels.length; i++) {
             if (panels[i].offsetTop == st) {
                 updateProgressBar(panels[i].id)
