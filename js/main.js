@@ -157,6 +157,28 @@ emailLink.addEventListener("click", () => {
     }
 )
 
+function setUpWorkButtons() {
+    var projectButtons = document.getElementById("project-list").children
+    var projectPages = document.getElementById("project-pages").children
+
+    for (let i = 0; i < projectButtons.length; i++) {
+        projectButtons[i].addEventListener("click", () => {
+            for (let j = 0; j < projectPages.length; j++) {
+                if (j == i) {
+                    projectButtons[j].classList.add("selected");
+                    projectPages[j].classList.add("visible");
+                }
+                else {
+                    projectPages[j].classList.remove("visible");
+                    projectButtons[j].classList.remove("selected");
+                }
+            }
+        })
+    }
+
+}
+
 
 setUpAboutButtons();
+setUpWorkButtons();
 setUpProgressBar();
