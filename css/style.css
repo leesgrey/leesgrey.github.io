@@ -269,6 +269,7 @@ a {
     }
     .body {
         height: 24rem;
+        overflow: hidden;
     }
 }
 
@@ -280,11 +281,12 @@ a {
         flex-direction: column;
 
         .body{
-            border: none;
             display: flex;
             gap: 0.5rem;
             padding: 0;
             flex-grow: 1;
+            align-items: center;
+            justify-content: center;
             
             .display {
                 border: 1px solid #e29734;
